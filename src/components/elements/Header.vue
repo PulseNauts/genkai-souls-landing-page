@@ -5,8 +5,8 @@ import { ref } from 'vue'
 <template lang="pug">
 .header.row.spaced.whide
     .logo.animated-soft.d-200.blink-in
-    .row.whide.spaced.aligned
-        .navigation.row.aligned.animated-soft.blur-in.d-3
+    .navigation.row.whide.spaced.aligned
+        .navigation-links.row.aligned.animated-soft.blur-in.d-3
             a stuff
             a morestuff
         button.main.animated-normal.blink-in.delayed.d-150 Claim a Soul
@@ -49,5 +49,37 @@ import { ref } from 'vue'
         background-size: contain
         background-position: center
 
+@media (max-width: 1920px)
+
+//'2xl': '1536px',
+@media (max-width: 1536px)
+
+//'xl': '1280px', small laptops
+@media (max-width: 1280px)
+
+//'lg': '1024px', ipads
+@media (max-width: 1024px)
+
+//'md': '768px', phones
+@media (max-width: 767px)
+    .header
+        top: .5rem
+        padding: 0 .5rem
+        .logo
+            margin-left: 0
+        >.row
+            justify-content: flex-end
+        .navigation
+            justify-content: end!important
+        .navigation-links
+            display: none
+    .firm
+        left: .5rem
+        bottom: .5rem
+    .social
+        right: .5rem
+        bottom: 2rem
+//'sm': '640px', small phones
+@media (max-width: 640px)
 
 </style>

@@ -17,7 +17,7 @@ section.hero.center
         VerticalLine.left.grow-bottom.delayed.d-075
         VerticalLine.right.grow-top.delayed.d-025
 
-        .column.spaced.start
+        .column.start.title
             div.column.condensed.start
                 h1.animated-soft.hard-glitch-in.d-050 GENKAI
                 h1.animated-soft.glitch-font-in.d-100 -SOULS
@@ -31,7 +31,7 @@ section.hero.center
 
 <style lang="sass">
 .hero
-    height: 100rvh
+    height: 100vh
     .inner-border
         position: absolute
         top: 2rem
@@ -69,4 +69,38 @@ section.hero.center
         right: 2rem
         
 
+@media (max-width: 1920px)
+
+//'2xl': '1536px',
+@media (max-width: 1536px)
+
+//'xl': '1280px', small laptops
+@media (max-width: 1280px)
+
+//'lg': '1024px', ipads
+@media (max-width: 1024px)
+    .hero
+        .hero-bg
+            background-position: 85% center
+//'md': '768px', phones
+@media (max-width: 767px)
+    .hero
+        align-items: flex-end!important
+        padding: 0
+        margin: 0
+        padding-bottom: 7rem
+        .title
+            align-items: stretch!important
+        .line-vertical
+            display: none
+        .inner-border
+            display: none
+            top: 0.5rem
+            bottom: 0.5rem
+            left: 0.5rem
+            right: 0.5rem
+        .hero-bg
+            background-position: 80% center
+//'sm': '640px', small phones
+@media (max-width: 640px)
 </style>
