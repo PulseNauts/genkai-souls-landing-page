@@ -24,12 +24,26 @@ section.hero.center
             div.column.end
                 p.right.animated-soft.blur-in.d-125 Claim the sword of your destiny!<br> Stake your soul for the future they took from us<br> Rebel! Reclaim! Reveal!
                 button.main.animated-soft.hard-glitch-in.delayed.d-250 Claim a Soul
-
+    .firm
+        p webpage made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a>
+    .social.row.end
+        a.animated-normal.blink-in.d-200(href="https://twitter.com/PulseSoulsNFT" target="_blank")
+            v-icon(name="co-telegram-plane" scale="1.75")
+        a.animated-normal.blink-in.d-225(href="https://t.me/Pulse_Souls" target="_blank")
+            v-icon(name="co-twitter" scale="1.75")
         
 
 </template>
 
 <style lang="sass">
+.firm
+    position: absolute
+    bottom: 3rem
+    left: 3rem
+.social
+    position: absolute
+    bottom: 3rem
+    right: 3rem
 .hero
     height: 100rvh
     .inner-border
@@ -88,7 +102,7 @@ section.hero.center
         align-items: flex-end!important
         padding: 0
         margin: 0
-        padding-bottom: 7rem
+        padding-bottom: 9rem
         .title
             align-items: stretch!important
         .line-vertical
@@ -101,6 +115,13 @@ section.hero.center
             right: 0.5rem
         .hero-bg
             background-position: 80% center
+
+        .firm
+            left: .5rem
+            bottom: .5rem
+        .social
+            right: .5rem
+            bottom: 2rem
 //'sm': '640px', small phones
 @media (max-width: 640px)
 </style>
