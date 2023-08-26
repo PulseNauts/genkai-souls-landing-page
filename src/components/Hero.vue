@@ -31,7 +31,7 @@ section.hero.center
 
 <style lang="sass">
 .hero
-    height: 100vh
+    height: 100rvh
     .inner-border
         position: absolute
         top: 2rem
