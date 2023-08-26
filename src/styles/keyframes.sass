@@ -1,0 +1,240 @@
+@keyframes glitch-font
+
+    0%
+        color: transparent
+
+    3%
+        color: lime
+        filter: drop-shadow(0 0 5px lime)
+    20%
+        color: white
+    23%
+        color: transparent
+    26%
+        color: white
+        filter: drop-shadow(0 0 5px white)
+
+    30%
+        color: black
+        filter: none
+        filter: drop-shadow(-1px 1px 0 rgba(lime,.25)) drop-shadow(3px 3px 0 rgba(cyan,0.1)) drop-shadow(-3px -3px 0 rgba(pink,.25)) drop-shadow(0 0 10px rgba(white,.25))
+
+    75%
+        color: rgb(255,100,200)
+        filter: drop-shadow(-1px 1px 0 rgba(lime,.1)) drop-shadow(3px 3px 0 rgba(cyan,0.1)) drop-shadow(-3px -3px 0 rgba(pink,.1)) drop-shadow(0 0 10px rgba(white,.1))
+        filter: none
+    78%
+        color: white
+        filter: drop-shadow(-2px 8px 0 lime) drop-shadow(5px 5px 0 cyan) drop-shadow(-5px -8px 0 pink) drop-shadow(0 0 10px rgba(white,.25))
+
+    85%
+        color: transparent
+        filter: none
+
+    90%
+        color: rgb(200,170,255)
+        filter: drop-shadow(0 0 5px rgb(200,170,255))
+
+    93%
+        color: white
+        filter: drop-shadow(0 0 5px white)
+
+    96%
+        color: transparent
+
+    98%
+        color: white
+    100%
+        color: white
+
+@keyframes hard-glitch
+
+    0%
+        border-color: transparent
+        background: transparent
+        color: transparent
+        filter: none
+
+    3%
+        background: transparent
+        margin: -3px 0
+        transform: scale(1) translate(0,0)
+        filter: drop-shadow(-5px -5px 0 pink)
+
+    20%
+        background: white
+        margin: -1px
+        transform: scale(1) translate(8px, -12px)
+        filter: drop-shadow(5px -8px 0 cyan)
+
+    25%
+        background: transparent
+        margin: -5px
+        transform: scale(1.15) translate(3px, -12px)
+        filter: drop-shadow(-4px 10px 0 lime) drop-shadow(5px 5px 0 cyan) drop-shadow(-5px -8px 0 pink)
+
+    30%
+        background: white
+        transform: scale(1) translate(0,0)
+        filter: drop-shadow(8px 8px 0 transparent) drop-shadow(-8px 3px 0 transparent)
+
+    35%
+        background: black
+        transform: none
+        transform: scale(1) translate(0,0)
+        filter: drop-shadow(8px 8px 0 rfba(lime,.25)) drop-shadow(-8px 3px 0 rgba(cyan,.1)) drop-shadow(15px 10px 0 rgba(pink,.5))
+
+    75%
+        background: white
+        color: black
+        transform: scale(1) translate(0, -4px)
+        filter: drop-shadow(8px 8px 0 rfba(lime,.25)) drop-shadow(-8px 3px 0 rgba(cyan,.1)) drop-shadow(15px 10px 0 rgba(pink,.5))
+
+    80%
+        background: transparent
+        color: white
+        transform: scale(1.15) translate(4px,0)
+        filter: none
+
+    85%
+        background: transparent
+        color: transparent
+        transform: scale(1) translate(0,0)
+        filter: none
+
+    90%
+        background: black
+        color: white
+        transform: scale(1)
+
+    93%
+        background: white
+        color: black
+        transform: scale(1)
+        filter: none
+
+    96%
+        background: transparent
+        color: white
+        filter: drop-shadow(8px 8px 0 rfba(lime,.25)) drop-shadow(-8px 3px 0 rgba(cyan,.1)) drop-shadow(15px 10px 0 rgba(pink,.5))
+
+    100%
+        background: transparent
+        color: white
+        filter: none
+
+@keyframes blink-font
+
+    0%
+        color: transparent
+
+    3%
+        color: lime
+        filter: drop-shadow(0 0 5px lime)
+    20%
+        color: white
+        transform: scale(1)
+
+    23%
+        color: transparent
+        transform: scale(1)
+
+    26%
+        color: white
+        filter: drop-shadow(0 0 5px white)
+        transform: scale(1.05)
+
+    30%
+        color: black
+        filter: none
+        transform: scale(1)
+
+    75%
+        color: rgb(255,100,200)
+        filter: drop-shadow(0 0 5px rgb(255,100,200))
+        transform: scale(1)
+
+    78%
+        color: white
+        filter: drop-shadow(0 0 5px white)
+        transform: scale(1.15)
+
+    80%
+        color: transparent
+        filter: none
+        transform: scale(1)
+
+    90%
+        color: rgb(200,170,255)
+        filter: drop-shadow(0 0 5px rgb(200,170,255))
+        transform: scale(1)
+
+    93%
+        color: white
+        filter: drop-shadow(0 0 5px white)
+        transform: scale(1.2)
+
+    96%
+        color: transparent
+        transform: scale(1)
+
+    98%
+        color: white
+    100%
+        color: white
+
+@keyframes blink
+
+    0%
+        border-color: transparent
+        background: transparent
+        color: transparent
+        filter: none
+
+    3%
+        background: transparent
+        border: white 1px solid
+
+    20%
+        background: white
+        border: white 1px solid
+
+    23%
+        background: transparent
+        border: white 1px solid
+
+    26%
+        background: white
+        border: 1px solid transparent
+
+    30%
+        background: black
+        border: 1px solid transparent
+
+    90%
+        background: black
+        color: white
+        border: 1px solid white
+
+    93%
+        background: white
+        color: black
+        border: 1px solid transparent
+
+    96%
+        background: transparent
+        color: white
+        border: 1px solid transparent
+
+    100%
+        background: transparent
+        color: white
+        border-color: rgb(255,255,255,.5)
+
+@keyframes blur-in
+    0%
+        opacity: 0
+        filter: blur(15px)
+    100%
+        opacity: 1
+        filter: blur(0)

@@ -1,0 +1,64 @@
+:root
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif
+    line-height: 1.5
+    font-weight: 400
+
+html, body, #app
+    width: 100%
+    overflow-x: hidden
+
+*
+
+    border: none
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+section
+    width: 100vw
+    min-height: 100vh
+    text-align: center
+    place-items: center
+    position: relative
+
+h1,h2,h3,h4,h5,p,span
+    text-align: start
+
+h1
+    font-size: 3.2em
+    line-height: 1.1
+
+.center
+    display: flex
+    align-items: center
+    justify-content: center
+
+p
+    max-width: 25rem
+    &.right
+        text-align: right
+
+.row, .column
+    display: flex
+    gap: 1rem
+    &.spaced
+        justify-content: space-between
+    // &.centered
+        // justify-content: center
+    &.aligned
+        align-items: center
+
+    &.condensed
+        gap: 0
+
+    &.end
+        align-items: flex-end
+    &.start
+        align-items: flex-start
+
+.row
+    flex-direction: row
+    &.whide
+        width: 100%
+.column
+    flex-direction: column
