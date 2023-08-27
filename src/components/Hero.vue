@@ -11,8 +11,7 @@ defineProps({
 
 <template lang="pug">
 section.hero.center
-    .hero-bg.animated-soft.blur-in
-    .inner-border
+    //- .hero-bg.animated-soft.blur-in
     Container
         VerticalLine.left.grow-bottom.delayed.d-075
         VerticalLine.right.grow-top.delayed.d-025
@@ -36,37 +35,33 @@ section.hero.center
 </template>
 
 <style lang="sass">
-.firm
-    position: absolute
-    bottom: 3rem
-    left: 3rem
-.social
-    position: absolute
-    bottom: 3rem
-    right: 3rem
 .hero
-    height: 100rvh
-    .inner-border
+    height: 100dvh
+    .firm
+        display: none
         position: absolute
-        top: 2rem
-        bottom: 2rem
-        left: 2rem
-        right: 2rem
-        border: 1px solid rgba(255,255,255,.5)
-        animation-name: border-in
-        animation-delay: 1.2s
-        animation-duration: 1.25s
-        animation-fill-mode: both
-    .hero-bg
+        bottom: 3rem
+        left: 3rem
+    .social
+        display: none
         position: absolute
-        right: 0
-        top: 0
-        width: 100%
-        height: 100%
-        background: url("../assets/hero-bg.jpg")
-        background-position: right center
-        background-size: cover
-        background-attachment: fixed
+        bottom: 3rem
+        right: 3rem
+.hero-bg
+    position: fixed
+    right: 0
+    top: 0
+    width: 100lvw
+    height: 100vh
+    background: url("../assets/hero-bg.jpg")
+    background-position: right center
+    background-size: cover
+    background-attachment: fixed
+
+.dark-glass
+    background: rgba(0,0,0,.25)
+    backdrop-filter: blur(15px) saturate(150%)
+    border-top: 1px solid rgba(255,255,255,.25)
 
 @keyframes border-in
     0%
@@ -117,9 +112,11 @@ section.hero.center
             background-position: 80% center
 
         .firm
+            display: unset
             left: .5rem
             bottom: .5rem
         .social
+            display: unset
             right: .5rem
             bottom: 2rem
 //'sm': '640px', small phones
