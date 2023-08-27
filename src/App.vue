@@ -54,9 +54,9 @@ Header
 //'xl': '1280px', small laptops
 @media (max-width: 1280px)
 
-//'lg': '1024px', ipads
+    //'lg': '1024px', ipads
 @media (max-width: 1024px)
-    .hero
+    #app
         .hero-bg
             background-position: 85% center
 //'md': '768px', phones

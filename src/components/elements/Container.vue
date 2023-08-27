@@ -23,13 +23,14 @@ import { ref } from 'vue'
 
 //'lg': '1024px', ipads
 @media (max-width: 1024px)
-
+    .container
+        margin: 0 2rem
+        .line-vertical
+            display: none
 //'md': '768px', phones
 @media (max-width: 767px)
     .container
         padding: 0 1rem
-        .line-vertical
-            display: none
 //'sm': '640px', small phones
 @media (max-width: 640px)
 

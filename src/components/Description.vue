@@ -5,7 +5,7 @@ import VerticalLine from './elements/adornments/VerticalLine.vue';
 </script>
 
 <template lang="pug">
-section.center.dark-glass
+section.center.dark-glass.content-section
     //- .hero-bg.animated-soft.blur-in
     //- .inner-border
     Container.column.expanded
@@ -48,6 +48,9 @@ section.center.dark-glass
 @media (max-width: 1024px)
 //'md': '768px', phones
 @media (max-width: 767px)
+    section.content-section
+        height: unset
+        padding: 8rem 0
     .table
         border: 1px solid rgba(255,255,255,.25)
         >*

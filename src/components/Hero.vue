@@ -88,9 +88,7 @@ section.hero.center
 
 //'lg': '1024px', ipads
 @media (max-width: 1024px)
-    .hero
-        .hero-bg
-            background-position: 85% center
+        
 //'md': '768px', phones
 @media (max-width: 767px)
     .hero
@@ -112,11 +110,11 @@ section.hero.center
             background-position: 80% center
 
         .firm
-            display: unset
+            display: unset!important
             left: .5rem
             bottom: .5rem
         .social
-            display: unset
+            display: flex!important
             right: .5rem
             bottom: 2rem
 //'sm': '640px', small phones
