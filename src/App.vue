@@ -2,12 +2,14 @@
 import Header from './components/elements/Header.vue';
 import Hero from './components/Hero.vue';
 import Description from './components/Description.vue';
+import CardSection from './components/CardSection.vue';
 </script>
 
 <template lang="pug">
 .hero-bg.animated-soft.blur-in
 Hero
 Description
+CardSection
 Header
 
 .inner-border

@@ -2,45 +2,45 @@
 import { ref } from 'vue'
 import Container from './elements/Container.vue';
 import VerticalLine from './elements/adornments/VerticalLine.vue';
+import ParallaxCard from './elements/ParallaxCard.vue';
 </script>
 
 <template lang="pug">
+
 section.center.dark-glass.content-section
-    //- .hero-bg.animated-soft.blur-in
-    //- .inner-border
     Container.column.expanded
         VerticalLine.left.grow-bottom.delayed.d-075
         VerticalLine.right.grow-top.delayed.d-025
 
         .column.condensed.whide
-            span.table-title Stats
-            .table.column.whide.stretched.condensed
-                .column.end.condensed
-                    p Max Supply
-                    h1 2000
-                .column.end.condensed
-                    p Price
-                    h1 450K PLS
-                .column.end.condensed
-                    p Mints Per Wallet
-                    h1 55
-                .column.end.condensed
-                    p OG Souls Holder Price
-                    h1 250K PLS
-
-            //- div.column.condensed.start
+            span.table-title Soul Gambit
         p
-            | Holders of the original Wrapped Souls NFT can receive a 
-            b 250K PLS 
-            | special price for every purchase for every token, 
-            b only once per soul
+            | Part of the accrued funds will be used on the development of a trading card game (TCG). The project is temporarily called 
+            b Soul Gambit 
+            | . The game will be a collectible, competitive experience, with lucrative combat mechanics and an economic incentive program for invested players.
+            | Genkai Souls holders will receive a 
+            b beta access pass 
+            | to play the game before it goes live, and will be granted access to an 
+            b exclusive chat 
+            | to discuss the game development.
+            br 
+            | Additionally, the holders will receive a 
+            b free airdrop 
+            | of 
+            b card sets 
+            | when the game goes live.
+            | So they can start in the game with zero investment. 
             | .
         p.gray
-            | Once the soul NFT has been used, the contract will 
-            em "mark" 
-            | it, and it wont be usable on further discounts.
+            | Rigts and airdrops will be granted to
+            b token holders 
+            | not
+            b minters 
+            | . You have to 
+            b hold 
+            | the NFT in order to keep access to chats and airdrops.
 
-        
+        ParallaxCard    
 
 </template>
 

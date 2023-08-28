@@ -36,7 +36,7 @@ section.hero.center
 
 <style lang="sass">
 .hero
-    height: 100dvh
+    height: 100svh
     .firm
         display: none
         position: absolute
