@@ -31,6 +31,7 @@ import { ref } from 'vue'
 @media (max-width: 767px)
     .container
         padding: 0 1rem
+        margin: 0
 //'sm': '640px', small phones
 @media (max-width: 640px)
 

@@ -24,9 +24,21 @@ section.center.dark-glass.content-section
                 .column.end.condensed
                     p Mints Per Wallet
                     h1 55
+                .column.end.condensed
+                    p OG Souls Discount
+                    h1 -250K PLS
 
             //- div.column.condensed.start
-        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, excepturi veniam, perferendis doloribus unde, voluptatum at obcaecati iusto tempore perspiciatis molestiae impedit facilis similique! Velit modi numquam nostrum eveniet dolorem!
+        p
+            | Holders of the original Wrapped Souls NFT can receive a 
+            b 250K PLS 
+            | discount for every purchase for every token, 
+            b only once per soul
+            | .
+        p.gray
+            | Once the soul NFT has been used, the contract will 
+            em "mark" 
+            | it, and it wont be usable on further discounts.
 
         
 
@@ -46,6 +58,7 @@ section.center.dark-glass.content-section
 
 //'lg': '1024px', ipads
 @media (max-width: 1024px)
+    
 //'md': '768px', phones
 @media (max-width: 767px)
     section.content-section
