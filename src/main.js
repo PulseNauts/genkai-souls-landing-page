@@ -10,6 +10,8 @@ import {
     GiCrossedSwords,
     RiVipDiamondFill,
     GiAlienFire,
+    GiLightningTear,
+    GiDevilMask,
 } from "oh-vue-icons/icons";
 
 addIcons(
@@ -18,7 +20,9 @@ addIcons(
     MdShield,
     GiCrossedSwords,
     RiVipDiamondFill,
-    GiAlienFire
+    GiAlienFire,
+    GiLightningTear,
+    GiDevilMask
 );
 CoTelegramPlane;
 createApp(App).component("v-icon", OhVueIcon).mount("#app");

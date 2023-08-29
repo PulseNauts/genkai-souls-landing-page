@@ -2,7 +2,7 @@
 import { useParallax } from '@vueuse/core'
 import {ref, computed, onMounted} from 'vue';
 
-const props = defineProps(["name", "cost", "atk", "def", "symbol", "faction", "type"]);
+const props = defineProps(["name", "cost", "atk", "def", "symbol", "faction", "type", "image"]);
 const container = ref(null)
 // let rotation;
 const parallax = useParallax(container)
@@ -29,7 +29,7 @@ const formattedYTranslation = computed(() => {
 <template lang="pug">
 .parallax-card(ref="container")
     .card-container
-        .card-character
+        .card-character(:style="{'background-image':'url(' + image + ')'}")
         .info
         .interface
             .bottom-fill.dark-glass
@@ -63,6 +63,7 @@ const formattedYTranslation = computed(() => {
     right: 0
     height: 100%
     perspective: 500px
+    transition: .5s
     p
         position: absolute
         span.skill

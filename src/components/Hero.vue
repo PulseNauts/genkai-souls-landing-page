@@ -18,8 +18,8 @@ section.hero.center
 
         .column.start.title
             div.column.condensed.start
-                h1.animated-soft.hard-glitch-in.d-050 GENKAI
-                h1.animated-soft.glitch-font-in.d-100 -SOULS
+                h1.animated-soft.hard-glitch-in.d-050.main-title GENKAI
+                h1.animated-soft.glitch-font-in.d-100.main-title -SOULS
             div.column.end
                 p.right.animated-soft.blur-in.d-125 Claim the sword of your destiny!<br> Stake your soul for the future they took from us<br> Rebel! Reclaim! Reveal!
                 button.main.animated-soft.hard-glitch-in.delayed.d-250 Claim a Soul
@@ -36,7 +36,7 @@ section.hero.center
 
 <style lang="sass">
 .hero
-    height: 100svh
+    height: 100vh
     .firm
         display: none
         position: absolute
@@ -51,8 +51,8 @@ section.hero.center
     position: fixed
     right: 0
     top: 0
-    width: 100lvw
-    height: 100vh
+    width: 100vw
+    height: 100dvh
     background: url("../assets/hero-bg.jpg")
     background-position: right center
     background-size: cover

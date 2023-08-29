@@ -3,12 +3,14 @@ import Header from './components/elements/Header.vue';
 import Hero from './components/Hero.vue';
 import Description from './components/Description.vue';
 import CardSection from './components/CardSection.vue';
+import ShowBand from './components/ShowBand.vue';
 </script>
 
 <template lang="pug">
 .hero-bg.animated-soft.blur-in
 Hero
 Description
+ShowBand
 CardSection
 Header
 
@@ -27,6 +29,12 @@ Header
 @import './styles/base-styles'
 @import './styles/content-styles'
 @import './styles/animations'
+
+@font-face
+    font-family: 'origicide'
+    src: url('./assets/duplexide.woff2') format('woff2'), url('../assets/duplexide.woff') format('woff')
+    font-weight: bold
+    font-style: normal
 
 .inner-border
     position: fixed

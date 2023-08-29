@@ -1,27 +1,61 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import Container from './elements/Container.vue';
 import VerticalLine from './elements/adornments/VerticalLine.vue';
 import ParallaxCard from './elements/ParallaxCard.vue';
 
 const cardList = [
     {
-        name: "Orochi- Venomancer",
+        name: "Orochi - Venomancer",
         faction: "gi-alien-fire",
         atk: 3,
         def: 2,
         cost: 2,
-        type: "Gekai - Mage",
-        IMAGE: '/card-char-0.jpg'
+        type: "Genkai - Mage",
+        image: './card-char-0.jpg'
+    },
+    {
+        name: "Frimelda - Light Guardian",
+        faction: "gi-lightning-tear",
+        atk: 5,
+        def: 4,
+        cost: 7,
+        type: "Demon Slayer - Swordman",
+        image: './card-char-2.jpg'
+    },
+    {
+        name: "Lilithrim - Lightcaster",
+        faction: "gi-devil-mask",
+        atk: 1,
+        def: 1,
+        cost: 5,
+        type: "Akuma - Mage",
+        image: './card-char-1.jpg'
     }
 ];
+const currentCardIndex = ref(0);
 
-const currentCard = ref(cardList[0]);
+const currentCard = computed(()=>{
+    return cardList[currentCardIndex.value];
+});
+
+const onAnimation = ref(false);
+onMounted(() => {
+    setInterval(()=>{
+        let next = currentCardIndex.value+1;
+        if(next >= cardList.length)
+        next = 0;
+        currentCardIndex.value = next;
+        onAnimation.value = true;
+        setTimeout(()=>onAnimation.value =  false, 1000);
+    },5000)
+});
 </script>
 
 <template lang="pug">
 
 section.center.dark-glass.content-section
+
     Container.column.expanded.text-content
         VerticalLine.left.grow-bottom.delayed.d-075
         VerticalLine.right.grow-top.delayed.d-025
@@ -29,7 +63,7 @@ section.center.dark-glass.content-section
 
         .column.condensed.whide
             span.table-title Soul Gambit
-        p
+        p.body-text
             | Part of the accrued funds will be used on the development of a trading card game (TCG). The project is temporarily called 
             b Soul Gambit 
             | . The game will be a collectible, competitive experience, with lucrative combat mechanics and an economic incentive program for invested players.
@@ -55,19 +89,51 @@ section.center.dark-glass.content-section
             b hold 
             | the NFT in order to keep access to chats and airdrops.
 
-        ParallaxCard(
-            :name="currentCard.name"
-            :type="currentCard.type"
-            :atk="currentCard.atk"
-            :def="currentCard.def"
-            :cost="currentCard.def"
-            :faction="currentCard.faction"
-            :image="currentCard.image"
-            )
+        template(v-for="(card, index) in cardList" key="index")
+            transition(name="fade")
+                ParallaxCard(
+                    v-if="index==currentCardIndex"
+                    :name="card.name"
+                    :type="card.type"
+                    :atk="card.atk"
+                    :def="card.def"
+                    :cost="card.def"
+                    :faction="card.faction"
+                    :image="card.image"
+                    )
 
 </template>
 
 <style lang="sass">
+.fade-enter-active, .fade-leave-active
+    transition: 1.5s
+
+.fade-enter, .fade-leave-to
+    opacity: 0
+
+.fade-enter
+    z-index: 100
+    transform: translateX(100px)
+.fade-leave-to
+    z-index: -1
+    transform: translateX(-100px)
+
+
+// .card-enter-active
+//   transition: .5s
+// .card-leave-active
+//   transition: .5s
+
+// .card-enter
+//   opacity: 0
+//   transform: translateZ(10%)
+    
+// .card-leave-to
+//   opacity: 0
+//   transform: translateZ(0)
+
+
+
 .table-title
     font-weight: bold
 
@@ -88,8 +154,8 @@ section.center.dark-glass.content-section
             >*
                 max-width: 50%
             .parallax-card
-                width: calc((100vw - 4rem)*0.65)!important
-                height: calc((100vw - 4rem)/2 * 1.5)!important
+                width: calc((100vw - 4rem)*0.6)!important
+                height: calc((100vw - 4rem)*0.65)!important
                 max-width: unset
                 right: -3rem
                 z-index: -1
@@ -109,6 +175,23 @@ section.center.dark-glass.content-section
         width: fit-content
         padding: .5rem 2rem
         font-weight: bold
+    section
+        .text-content
+
+            .body-text
+                margin-top: calc(100vw * 1.5)
+                width: 100%
+                max-width: unset
+            p
+                width: 100%
+                max-width: unset
+            .parallax-card
+                width: 110vw!important
+                height: calc((100vw - 2rem) * 1.4)!important
+                max-width: unset
+                top: 5rem
+                left: 50%
+                transform: translateX(-50%)
                 
 
 //'sm': '640px', small phones
