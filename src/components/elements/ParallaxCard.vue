@@ -23,7 +23,6 @@ const formattedYTranslation = computed(() => {
     return (parallax.roll.value * 5) + '%';
 });
 
-
 </script>
 
 <template lang="pug">
@@ -34,21 +33,21 @@ const formattedYTranslation = computed(() => {
         .interface
             .bottom-fill.dark-glass
             .bottom-text.column
-                span.title {{ name }}
+                span.title.glitch-font-in.animated-normal {{ name }}
                 .tags.row.condensed
-                    span {{type}}
-                p.body(v-html="body")
-            .row.cost.aligned
+                    span.glitch-font-in.animated-normal {{type}}
+                p.body.glitch-font-in.animated-normal.d-025(v-html="body")
+            .row.cost.aligned.blink-in.animated-normal.d-050
                 v-icon(name="ri-vip-diamond-fill" scale="1.25" fill="black")
                 span {{ cost }}
-            .row.atk.aligned
+            .row.atk.aligned.glitch-font-in.animated-normal.d-50
                 v-icon(name="gi-crossed-swords" scale="1.25")
                 span {{ atk }}
-            .row.def.aligned
+            .row.def.aligned.glitch-font-in.animated-normal.d-100
                 span {{ def }}
                 v-icon(name="md-shield" scale="1.25")
             .border
-            v-icon.faction(:name="faction" scale="2.5" fill="white")    
+            v-icon.faction.glitch-font-in.animated-normal.d-125(:name="faction" scale="2.5" fill="white")    
 
 </template>
 
