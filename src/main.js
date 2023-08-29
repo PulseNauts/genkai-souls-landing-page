@@ -8,8 +8,17 @@ import {
     CoTwitter,
     MdShield,
     GiCrossedSwords,
+    RiVipDiamondFill,
+    GiAlienFire,
 } from "oh-vue-icons/icons";
 
-addIcons(CoTelegramPlane, CoTwitter, MdShield, GiCrossedSwords);
+addIcons(
+    CoTelegramPlane,
+    CoTwitter,
+    MdShield,
+    GiCrossedSwords,
+    RiVipDiamondFill,
+    GiAlienFire
+);
 CoTelegramPlane;
 createApp(App).component("v-icon", OhVueIcon).mount("#app");
