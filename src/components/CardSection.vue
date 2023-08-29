@@ -8,9 +8,10 @@ import ParallaxCard from './elements/ParallaxCard.vue';
 <template lang="pug">
 
 section.center.dark-glass.content-section
-    Container.column.expanded
+    Container.column.expanded.text-content
         VerticalLine.left.grow-bottom.delayed.d-075
         VerticalLine.right.grow-top.delayed.d-025
+
 
         .column.condensed.whide
             span.table-title Soul Gambit
@@ -58,7 +59,18 @@ section.center.dark-glass.content-section
 
 //'lg': '1024px', ipads
 @media (max-width: 1024px)
-    
+    section
+        .text-content
+            z-index: 10000
+            >p,
+            >*
+                max-width: 50%
+            .parallax-card
+                width: calc((100vw - 4rem)*0.65)!important
+                height: calc((100vw - 4rem)/2 * 1.5)!important
+                max-width: unset
+                right: -3rem
+                z-index: -1
 //'md': '768px', phones
 @media (max-width: 767px)
     section.content-section
