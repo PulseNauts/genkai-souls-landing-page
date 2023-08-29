@@ -120,10 +120,10 @@ section.center.dark-glass.content-section
 <style lang="sass">
 .fade-enter-active
     transition: opacity .5s, transform 1.25s
-    
+    z-index: 1000
 .fade-leave-active
     transition: 1.5s
-
+    z-index: -1
 .fade-enter-from, .fade-leave-to
     opacity: 0
 
@@ -214,8 +214,8 @@ span.light
                 height: calc((100vw - 2rem) * 1.4)!important
                 max-width: unset
                 top: 5rem
-                left: 50%
-                transform: translateX(-50%)
+                left: -1rem
+                // transform: translateX(-50%)
                 
 
 //'sm': '640px', small phones
