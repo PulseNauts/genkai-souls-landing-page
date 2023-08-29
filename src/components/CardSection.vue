@@ -3,6 +3,20 @@ import { ref } from 'vue'
 import Container from './elements/Container.vue';
 import VerticalLine from './elements/adornments/VerticalLine.vue';
 import ParallaxCard from './elements/ParallaxCard.vue';
+
+const cardList = [
+    {
+        name: "Orochi- Venomancer",
+        faction: "gi-alien-fire",
+        atk: 3,
+        def: 2,
+        cost: 2,
+        type: "Gekai - Mage",
+        IMAGE: '/card-char-0.jpg'
+    }
+];
+
+const currentCard = ref(cardList[0]);
 </script>
 
 <template lang="pug">
@@ -41,7 +55,15 @@ section.center.dark-glass.content-section
             b hold 
             | the NFT in order to keep access to chats and airdrops.
 
-        ParallaxCard    
+        ParallaxCard(
+            :name="currentCard.name"
+            :type="currentCard.type"
+            :atk="currentCard.atk"
+            :def="currentCard.def"
+            :cost="currentCard.def"
+            :faction="currentCard.faction"
+            :image="currentCard.image"
+            )
 
 </template>
 

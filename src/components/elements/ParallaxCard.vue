@@ -2,6 +2,7 @@
 import { useParallax } from '@vueuse/core'
 import {ref, computed, onMounted} from 'vue';
 
+const props = defineProps(["name", "cost", "atk", "def", "symbol", "faction", "type"]);
 const container = ref(null)
 // let rotation;
 const parallax = useParallax(container)
@@ -22,6 +23,7 @@ const formattedYTranslation = computed(() => {
     return (parallax.roll.value * 5) + '%';
 });
 
+
 </script>
 
 <template lang="pug">
@@ -32,25 +34,24 @@ const formattedYTranslation = computed(() => {
         .interface
             .bottom-fill.dark-glass
             .bottom-text.column
-                span.title Orochi - The Venomancer
+                span.title {{ name }}
                 .tags.row.condensed
-                    span Human - Onmyiji - Mage
-
-                p.body
-                    | When a friendly unit dies, it transforms into a 3/3 
-                    span.skill Venom 
-                    | Green Viper.
+                    span {{type}}
+                //- p.body
+                //-     | When a friendly unit dies, it transforms into a 3/3 
+                //-     span.skill Venom 
+                //-     | Green Viper.
             .row.cost.aligned
                 v-icon(name="ri-vip-diamond-fill" scale="1.25" fill="black")
-                span 2
+                span {{ cost }}
             .row.atk.aligned
                 v-icon(name="gi-crossed-swords" scale="1.25")
-                span 3
+                span {{ atk }}
             .row.def.aligned
-                span 2
+                span {{ def }}
                 v-icon(name="md-shield" scale="1.25")
             .border
-            v-icon.faction(name="gi-alien-fire" scale="2.5" fill="white")    
+            v-icon.faction(:name="faction" scale="2.5" fill="white")    
 
 </template>
 

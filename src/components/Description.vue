@@ -17,7 +17,7 @@ section.center.dark-glass.content-section
             .table.column.whide.stretched.condensed
                 .column.end.condensed
                     p Max Supply
-                    h1 2000
+                    h1 3000
                 .column.end.condensed
                     p Price
                     h1 450K PLS
@@ -32,8 +32,10 @@ section.center.dark-glass.content-section
         p
             | Holders of the original Wrapped Souls NFT can receive a 
             b 250K PLS 
-            | special price for every purchase for every token, 
-            b only once per soul
+            | special price (
+            b -200k PLS
+            | ) for every purchase for every token, 
+            b only once per OG Soul
             | .
         p.gray
             | Once the soul NFT has been used, the contract will 
