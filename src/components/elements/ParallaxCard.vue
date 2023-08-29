@@ -2,7 +2,7 @@
 import { useParallax } from '@vueuse/core'
 import {ref, computed, onMounted} from 'vue';
 
-const props = defineProps(["name", "cost", "atk", "def", "symbol", "faction", "type", "image"]);
+const props = defineProps(["name", "cost", "atk", "def", "symbol", "faction", "type", "image", "body"]);
 const container = ref(null)
 // let rotation;
 const parallax = useParallax(container)
@@ -28,7 +28,7 @@ const formattedYTranslation = computed(() => {
 
 <template lang="pug">
 .parallax-card(ref="container")
-    .card-container
+    .card-container.animated-container
         .card-character(:style="{'background-image':'url(' + image + ')'}")
         .info
         .interface
@@ -37,10 +37,7 @@ const formattedYTranslation = computed(() => {
                 span.title {{ name }}
                 .tags.row.condensed
                     span {{type}}
-                //- p.body
-                //-     | When a friendly unit dies, it transforms into a 3/3 
-                //-     span.skill Venom 
-                //-     | Green Viper.
+                p.body(v-html="body")
             .row.cost.aligned
                 v-icon(name="ri-vip-diamond-fill" scale="1.25" fill="black")
                 span {{ cost }}
@@ -63,7 +60,6 @@ const formattedYTranslation = computed(() => {
     right: 0
     height: 100%
     perspective: 500px
-    transition: .5s
     p
         position: absolute
         span.skill
@@ -112,21 +108,14 @@ const formattedYTranslation = computed(() => {
                     font-weight: bold
                     
                 .tags
+                    filter: drop-shadow(0 0 8px black)
                     span
                         font-weight: bold
                         // padding: .1rem .25rem
                         // background: black
                         color: white
                         font-size: 1rem
-                        color: gray
-                .skills
-                    span
-                        font-weight: bold
-                        padding: .2rem 1rem
-                        background: white
-                        color: black
-                        font-size: 1rem
-                        border-radius: .25rem
+                        color: rgb(200,200,200)
             .border
                 position: absolute
                 top: 10px

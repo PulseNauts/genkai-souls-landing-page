@@ -12,7 +12,8 @@ const cardList = [
         def: 2,
         cost: 2,
         type: "Genkai - Mage",
-        image: './card-char-0.jpg'
+        image: './card-char-0.jpg',
+        body: 'When a friendly unit dies, it transforms into a 3/3 <span class="skill">Venom</span> <span class="green">Green</span> Viper'
     },
     {
         name: "Frimelda - Light Guardian",
@@ -20,17 +21,30 @@ const cardList = [
         atk: 5,
         def: 4,
         cost: 7,
-        type: "Demon Slayer - Swordman",
-        image: './card-char-2.jpg'
+        type: "Demon Slayer - Swordsman",
+        image: './card-char-2.jpg',
+        body: 'Adjacent units gain +1/0 and become <span class="light">White</span>'
+
     },
     {
-        name: "Lilithrim - Lightcaster",
+        name: "Lilithim - Lightcaster",
         faction: "gi-devil-mask",
         atk: 1,
         def: 1,
         cost: 5,
         type: "Akuma - Mage",
-        image: './card-char-1.jpg'
+        image: './card-char-1.jpg',
+        body: 'All friendly units have <span class="skill">Lifelink</span>'
+    },
+    {
+        name: "Balnatar - Chaos Sorcerer",
+        faction: "gi-alien-fire",
+        atk: 7,
+        def: 3,
+        cost: 10,
+        type: "Genkai - Mage",
+        image: './card-char-3.jpg',
+        body: '<span class="skill">Spell Damage +4</span>'
     }
 ];
 const currentCardIndex = ref(0);
@@ -46,8 +60,6 @@ onMounted(() => {
         if(next >= cardList.length)
         next = 0;
         currentCardIndex.value = next;
-        onAnimation.value = true;
-        setTimeout(()=>onAnimation.value =  false, 1000);
     },5000)
 });
 </script>
@@ -81,61 +93,73 @@ section.center.dark-glass.content-section
             | So they can start in the game with zero investment. 
             | .
         p.gray
-            | Rigts and airdrops will be granted to
+            | Rigts and airdrops will be granted to 
             b token holders 
-            | not
+            | not 
             b minters 
             | . You have to 
             b hold 
             | the NFT in order to keep access to chats and airdrops.
 
         template(v-for="(card, index) in cardList" key="index")
-            transition(name="fade")
+            transition(appear name="fade" mode="in-out")
                 ParallaxCard(
                     v-if="index==currentCardIndex"
                     :name="card.name"
                     :type="card.type"
                     :atk="card.atk"
                     :def="card.def"
-                    :cost="card.def"
+                    :cost="card.cost"
                     :faction="card.faction"
                     :image="card.image"
+                    :body="card.body"
                     )
 
 </template>
 
 <style lang="sass">
-.fade-enter-active, .fade-leave-active
+.fade-enter-active
+    transition: opacity .5s, transform 1.25s
+    
+.fade-leave-active
     transition: 1.5s
 
-.fade-enter, .fade-leave-to
+.fade-enter-from, .fade-leave-to
     opacity: 0
 
 .fade-enter
+    opacity: 0
+    transform: scale(1.1)
+
+.fade-enter-from
     z-index: 100
-    transform: translateX(100px)
+    transform: translateX(-30px)  rotateY(25deg) scale(1.1)
+    // .card-container.animated-container
+        // transform: translate(calc(-50% - 50px), -50%, 50px) rotateX(-15deg) rotateY(10deg)!important
 .fade-leave-to
     z-index: -1
-    transform: translateX(-100px)
+    transform: translateX(100px) rotateY(45deg) scale(.9)
 
-
-// .card-enter-active
-//   transition: .5s
-// .card-leave-active
-//   transition: .5s
-
-// .card-enter
-//   opacity: 0
-//   transform: translateZ(10%)
-    
-// .card-leave-to
-//   opacity: 0
-//   transform: translateZ(0)
-
+    // .card-container.animated-container
+        // transform: translate(calc(-50% + 50px), -50%, -50px) rotateX(-15deg) rotateY(-10deg)!important
 
 
 .table-title
     font-weight: bold
+
+
+span.skill
+    font-weight: bold
+    padding: 0 .25rem
+    background: rgba(200,200,200,.5)
+    color: black
+    font-size: .75rem
+    border-radius: .25rem
+span.green
+    color: rgb(0,255,150)
+
+span.light
+    color: gold
 
 @media (max-width: 1920px)
 
