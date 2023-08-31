@@ -5,7 +5,7 @@ import VerticalLine from './elements/adornments/VerticalLine.vue';
 
 const cardList = [
     {
-        name: "Genkai Spirits",
+        name: "Genkai",
         image:'./rarity/genkai.jpg',
         amount: 1500,
         legendary: 10,
@@ -190,6 +190,11 @@ section.center.dark-glass.content-section
                     .card-image(:style="{backgroundImage: 'url(' + card.image +')'}")
                     span
                         | {{ card.name }}
+        //- .play-menu
+        //-     button.next(@click="next")
+        //-     button.prev(@click="prev")
+        //-     button.auto(@click="auto")
+        //-         .indicator
         
 
 </template>
