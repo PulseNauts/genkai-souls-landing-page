@@ -4,6 +4,8 @@ import Hero from './components/Hero.vue';
 import Description from './components/Description.vue';
 import CardSection from './components/CardSection.vue';
 import ShowBand from './components/ShowBand.vue';
+import RarityDistribution from './components/RarityDistribution.vue';
+import FAQ from './components/FAQ.vue';
 </script>
 
 <template lang="pug">
@@ -12,6 +14,9 @@ Hero
 Description
 ShowBand
 CardSection
+RarityDistribution
+FAQ
+
 Header
 
 .inner-border
@@ -37,6 +42,7 @@ Header
     font-style: normal
 
 .inner-border
+    pointer-events: none
     position: fixed
     top: 2rem
     bottom: 2rem

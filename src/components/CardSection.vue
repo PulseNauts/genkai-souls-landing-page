@@ -93,7 +93,7 @@ section.center.dark-glass.content-section
             | So they can start in the game with zero investment. 
             | .
         p.gray
-            | Rigts and airdrops will be granted to 
+            | Rights and airdrops will be granted to 
             b token holders 
             | not 
             b minters 
