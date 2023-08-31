@@ -5,7 +5,7 @@ import VerticalLine from './elements/adornments/VerticalLine.vue';
 
 const cardList = [
     {
-        name: "Genkai",
+        name: "Genkai Spirits",
         image:'./rarity/genkai.jpg',
         amount: 1500,
         legendary: 10,
@@ -16,7 +16,7 @@ const cardList = [
 
     },
     {
-        name: "Shape -shifter",
+        name: "Shape -Shifters",
         image: './rarity/shapeshifter.jpg',
         amount: 200,
         legendary: 3,
@@ -27,7 +27,7 @@ const cardList = [
 
     },
     {
-        name: "Humanoid",
+        name: "Humanoids",
         image: './rarity/humanoid.jpg',
         amount: 125,
         legendary: 3,
@@ -38,7 +38,7 @@ const cardList = [
 
     },
     {
-        name: "Alien",
+        name: "Aliens",
         image: './rarity/alien.jpg',
         amount: 50,
         legendary: 3,
@@ -49,7 +49,7 @@ const cardList = [
 
     },
     {
-        name: "Undead",
+        name: "Undeads",
         image: './rarity/undead.jpg',
         amount: 125,
         legendary: 3,
@@ -60,7 +60,7 @@ const cardList = [
 
     },
     {
-        name: "Mutant Ape",
+        name: "Mutant Apes",
         image: './rarity/mutant.jpg',
         amount: 150,
         legendary: 3,
@@ -70,7 +70,7 @@ const cardList = [
         description: "In a time of unchecked experimentation, certain Apes were exposed to atomic and nuclear energies. The aftermath of this exposure forever altered them. Now, as Mutants, they wear their transformed DNA with a blend of pride and power. Their appearance serves as a stark reminder of the unpredictable dance between nature and mankind's ambition."
     },
     {
-        name: "Fable",
+        name: "Fables",
         image: './rarity/fable.jpg',
         amount: 75,
         legendary: 3,
@@ -81,7 +81,7 @@ const cardList = [
 
     },
     {
-        name: "Demon Slayer",
+        name: "Demon Slayers",
         image: './rarity/demonslayer.jpg',
         amount: 250,
         legendary: 3,
@@ -92,7 +92,7 @@ const cardList = [
 
     },
     {
-        name: "Akuma",
+        name: "Akumas",
         image: './rarity/akuma.jpg',
         amount: 250,
         legendary: 3,
@@ -114,7 +114,7 @@ const cardList = [
 
     },
     {
-        name: "Ape",
+        name: "Apes",
         image: './rarity/ape.jpg',
         amount: 200,
         legendary: 3,
