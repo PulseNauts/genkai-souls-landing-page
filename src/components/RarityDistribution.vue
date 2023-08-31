@@ -49,7 +49,7 @@ const cardList = [
 
     },
     {
-        name: "Undeads",
+        name: "Undead",
         image: './rarity/undead.jpg',
         amount: 125,
         legendary: 3,
@@ -154,7 +154,7 @@ onMounted(() => {
 
 <template lang="pug">
 
-section.center.dark-glass.content-section
+section.center.dark-glass.content-section(id="rarity-distribution")
 
     Container.column.expanded.end(style="min-height:70vh")
         VerticalLine.left.grow-bottom.delayed.d-075
@@ -229,7 +229,9 @@ section.center.dark-glass.content-section
             animation-duration: .5s
             animation-iteration-count: 1
             filter: drop-shadow(0 0 3px rgba(white,1)) drop-shadow(0 0 10px rgba(yellow,.25)) drop-shadow(5px 5px 0 rgba(cyan,.75)) drop-shadow(-5px -5px 0 rgba(magenta,.75)) drop-shadow(-5px 5px 0 rgba(green,.75))
-
+            
+            span
+                display: none
         &:hover
             border: 1px solid gold
             box-shadow: 0 0 5px yellow

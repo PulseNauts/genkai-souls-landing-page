@@ -27,6 +27,11 @@ section.center.dark-glass.footer
         display: none
     .social
         display: none
+        > a
+            &:hover
+                animation-name: glitch-font
+                animation-duration: .75s
+                animation-iteration-count: 1
 
 
 

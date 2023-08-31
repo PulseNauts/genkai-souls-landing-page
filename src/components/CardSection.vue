@@ -66,7 +66,7 @@ onMounted(() => {
 
 <template lang="pug">
 
-section.center.dark-glass.content-section
+section.center.dark-glass.content-section(id="soul-gambit")
 
     Container.column.expanded.text-content
         VerticalLine.left.grow-bottom.delayed.d-075
@@ -76,30 +76,27 @@ section.center.dark-glass.content-section
         .column.condensed.whide
             span.table-title Soul Gambit
         p.body-text
-            | Part of the accrued funds will be used on the development of a trading card game (TCG). The project is temporarily called 
-            b Soul Gambit 
-            | . The game will be a collectible, competitive experience, with lucrative combat mechanics and an economic incentive program for invested players.
-            | Genkai Souls holders will receive a 
-            b beta access pass 
-            | to play the game before it goes live, and will be granted access to an 
-            b exclusive chat 
-            | to discuss the game development.
-            br 
-            | Additionally, the holders will receive a 
-            b free airdrop 
-            | of 
-            b card sets 
-            | when the game goes live.
-            | So they can start in the game with zero investment. 
-            | .
+            | Get ready for an exhilarating journey! We're diverting a portion of our funds to bring to life a brand-new trading card game (TCG) - currently titled 
+            b "Soul Gambit" 
+            | Dive into a world where every card duel is not only thrilling but also rewarding. With dynamic combat mechanics and lucrative rewards, it promises an unmatched gaming experience.
+            b
+            b
+            | Exclusive for PulseSouls and Genkai Souls holders: You'll get 
+            b early beta access 
+            | to test your mettle and shape the game's future. Dive into our 
+            b exclusive chat community 
+            | to discuss game development nuances. And that's not all! When 
+            b Soul Gambit
+            | launches, you'll receive a 
+            b free card set airdrop
+            | , so you're battle-ready from day one without spending a dime.
+
         p.gray
-            | Rights and airdrops will be granted to 
+            | Remember, only 
             b token holders 
-            | not 
-            b minters 
-            | . You have to 
-            b hold 
-            | the NFT in order to keep access to chats and airdrops.
+            | get these perks, 
+            b not the minters
+            |. Keep your NFTs close, as they're your key to retaining access to exclusive chats and airdrops. Let's redefine the TCG experience together!
 
         template(v-for="(card, index) in cardList" key="index")
             transition(appear name="fade" mode="in-out")

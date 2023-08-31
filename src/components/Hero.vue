@@ -22,7 +22,7 @@ section.hero.center
                 h1.animated-soft.glitch-font-in.d-100.main-title -SOULS
             div.column.end
                 p.right.animated-soft.blur-in.d-125 Claim the sword of your destiny!<br> Stake your soul for the future they took from us<br> Rebel! Reclaim! Reveal!
-                button.main.animated-soft.hard-glitch-in.delayed.d-250 Claim a Soul
+                button.main.animated-soft.hard-glitch-in.delayed.d-250 Minting Soon
     .firm
         p webpage made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a>
     .social.row.end

@@ -5,7 +5,7 @@ import VerticalLine from './elements/adornments/VerticalLine.vue';
 </script>
 
 <template lang="pug">
-section.center.dark-glass.content-section
+section.center.dark-glass.content-section(id="about")
     //- .hero-bg.animated-soft.blur-in
     //- .inner-border
     Container.column.expanded
@@ -28,7 +28,6 @@ section.center.dark-glass.content-section
                     p OG Souls Holder Price
                     h1 250K PLS
 
-            //- div.column.condensed.start
         p
             | Holders of the original Wrapped Souls NFT can receive a 
             b 250K PLS 

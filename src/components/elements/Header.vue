@@ -7,13 +7,15 @@ import { ref } from 'vue'
     .logo.animated-soft.d-200.blink-in
     .navigation.row.whide.spaced.aligned
         .navigation-links.row.aligned.animated-soft.blur-in.d-3
-            a stuff
-            a morestuff
-        button.main.animated-normal.blink-in.delayed.d-150 Claim a Soul
-    
-            //- v-icon(name="CoTelegramPlane" scale="1") CoTwitter
+            a(href="#about") Stats
+            a(href="#soul-gambit") SoulGambit
+            a(href="#rarity-distribution") Rarity Distribution 
+            a(href="#faq") FAQ
 
+        button.burguer-button
+            v-icon(name="md-menu-sharp" scale="2" fill="white")
 
+        button.main.animated-normal.blink-in.delayed.d-150 Minting Soon
 
 </template>
 
@@ -24,7 +26,10 @@ import { ref } from 'vue'
     left: 0
     padding: 2rem
     width: calc(100vw - 4rem)
-
+    button
+        &:hover
+            background: white
+            color: black
     .logo
         margin: 1rem
         width: 4rem
@@ -34,6 +39,15 @@ import { ref } from 'vue'
         background-repeat: no-repeat
         background-size: contain
         background-position: center
+    .burguer-button
+        display: none
+    .navigation-links
+        > a
+            text-decoration: none
+            &:hover
+                animation-name: glitch-font
+                animation-duration: .75s
+                animation-iteration-count: 1
 
 @media (max-width: 1920px)
 
@@ -50,6 +64,9 @@ import { ref } from 'vue'
 @media (max-width: 767px)
     .header
         padding: 1rem
+        .burguer-button
+            display: unset
+            padding: .25rem
         .logo
             margin: 0
         >.row

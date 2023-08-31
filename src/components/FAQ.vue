@@ -5,7 +5,7 @@ import VerticalLine from './elements/adornments/VerticalLine.vue';
 </script>
 
 <template lang="pug">
-section.center.dark-glass.content-section
+section.center.dark-glass.content-section(id="faq")
     //- .hero-bg.animated-soft.blur-in
     //- .inner-border
     Container.column.expanded
@@ -16,19 +16,70 @@ section.center.dark-glass.content-section
             span.table-title FAQ
             .table.column.whide.stretched.condensed
                 .column.end.condensed
-                    p.title Question a
-                    p.gray Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aperiam nam nesciunt totam. Cumque necessitatibus alias aspernatur, numquam quisquam voluptatum blanditiis veritatis vel animi fugiat repellendus quidem aut reprehenderit odit.
+                    p.title.row.whide.left.border-bottom What's the plan for Genkai Souls?
+                    p.gray
+                        | Explore the art of Genkai, find your species, and collect those 
+                        b $SOUL.
+                        br
+                        b Genkai 
+                        | will be an 
+                        b utility-enabled PFP 
+                        | that will hold unique characteristics to the 
+                        b PulseSouls 
+                        | ecosystem. They will serve as 
+                        b PulseSouls' flagship collection
+                        | , as we continue to expand our IP in web2 and web3.
+                        | No boundaries, no limits.
                 .column.end.condensed
-                    p.title Question b
-                    p.gray Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aperiam nam nesciunt totam. Cumque necessitatibus alias aspernatur, numquam quisquam voluptatum blanditiis veritatis vel animi fugiat repellendus quidem aut reprehenderit odit.
+                    p.title.row.whide.left.border-bottom Minting?
+                    p
+                        | Public Minting price is set at 
+                        b 450.000 PLS 
+                        | per 
+                        b GenkaiSoul
+                        | . Each wrapped PulseSouls you hold, will give you 
+                        b one discounted mint 
+                        | at 
+                        b 250.000 PLS
+                        | . Once the Soul NFT has been used, the contract will „mark“ it, and it won't be useable on further discounts..
                 .column.end.condensed
-                    p.title Question c
-                    p.gray Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aperiam nam nesciunt totam. Cumque necessitatibus alias aspernatur, numquam quisquam voluptatum blanditiis veritatis vel animi fugiat repellendus quidem aut reprehenderit odit.
+                    p.title.row.whide.left.border-bottom Utility?
+                    p
+                        b PulseSouls 
+                        | and 
+                        b GenkaiSouls 
+                        | holders, will receive a 
+                        b beta access pass 
+                        | to play 
+                        b Soul Gambit 
+                        | before it goes live, and will be granted access to an 
+                        b exclusive chat 
+                        | to discuss the game development. Additionally, the holders will receive a 
+                        b free airdrop 
+                        | of card sets when the game goes live, so they can start playing without expenses.
                 .column.end.condensed
-                    p.title question d
-                    p.gray Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aperiam nam nesciunt totam. Cumque necessitatibus alias aspernatur, numquam quisquam voluptatum blanditiis veritatis vel animi fugiat repellendus quidem aut reprehenderit odit.
-
-        
+                    p.title.row.whide.left.border-bottom $SOUL Staking?
+                    p
+                        | Every 
+                        b GenkaiSoul 
+                        | will earn 
+                        b 3 $SOUL a day
+                        |, which can be used in the 
+                        b LoreBook
+                        | , 
+                        b SoulShop 
+                        | and 
+                        b SoulGambit
+                        |.
+                .column.end.condensed
+                    p.title.row.whide.left.border-bottom LoreBook
+                    p
+                        | The Lorebook will allow holders to change the name of their 
+                        b Soul NFT 
+                        | changing the name costs 
+                        b 50 $SOUL
+                        | , while writing the entire description costs 
+                        b 100 $SOUL.
 
 </template>
 
