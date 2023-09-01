@@ -317,6 +317,9 @@ button.auto
         width: 100%
         .body-content
             margin-top: 95vw
+            height: 210px
+        p
+            height: 250px
         .main-title
             max-width: calc(100vw - 4rem)
 

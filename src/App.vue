@@ -7,6 +7,7 @@ import ShowBand from './components/ShowBand.vue';
 import RarityDistribution from './components/RarityDistribution.vue';
 import FAQ from './components/FAQ.vue';
 import Footer from './components/Footer.vue';
+// import PromoSection from './components/PromoSection.vue';
 </script>
 
 <template lang="pug">
@@ -16,6 +17,7 @@ Description
 ShowBand
 CardSection
 RarityDistribution
+//- PromoSection
 FAQ
 Footer
 
