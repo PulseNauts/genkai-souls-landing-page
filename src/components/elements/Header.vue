@@ -1,25 +1,39 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+
+const displayMenu = ref(false);
 </script>
 
 <template lang="pug">
 .header.row.spaced.whide
     .logo.animated-soft.d-200.blink-in
     .navigation.row.whide.spaced.aligned
-        .navigation-links.row.aligned.animated-soft.blur-in.d-3
-            a(href="#about") Stats
-            a(href="#soul-gambit") SoulGambit
-            a(href="#rarity-distribution") Rarity Distribution 
-            a(href="#faq") FAQ
+        .navigation-links.row.aligned.animated-soft.blur-in.d-3(:class="{'mobile-show': displayMenu}")
+            a.d-075(href="#about") Stats
+            a.d-100(href="#soul-gambit") SoulGambit
+            a.d-125(href="#rarity-distribution") Rarity Distribution 
+            a.d-150(href="#faq") FAQ
+            .social.row.end
+                a.animated-normal.blink-in.d-200(href="https://twitter.com/PulseSoulsNFT" target="_blank")
+                    v-icon(name="co-telegram-plane" scale="1.75")
+                a.animated-normal.blink-in.d-225(href="https://t.me/Pulse_Souls" target="_blank")
+                    v-icon(name="co-twitter" scale="1.75")
 
-        button.burguer-button
-            v-icon(name="md-menu-sharp" scale="2" fill="white")
+
+        button.burguer-button(@click="displayMenu = !displayMenu")
+            v-icon(name="md-menu-sharp" scale="2" fill="white" v-if="!displayMenu")
+            v-icon(name="io-close-sharp" scale="2" fill="white" v-else)
+
 
         button.main.animated-normal.blink-in.delayed.d-150 Minting Soon
 
 </template>
 
 <style lang="sass">
+.burguer-button
+    &:hover
+        background: transparent!important
+        border: 1px solid rba(white,.5)!important
 .header
     position: fixed
     top: 0
@@ -48,6 +62,7 @@ import { ref } from 'vue'
                 animation-name: glitch-font
                 animation-duration: .75s
                 animation-iteration-count: 1
+            
 
 @media (max-width: 1920px)
 
@@ -75,12 +90,34 @@ import { ref } from 'vue'
             justify-content: end!important
         .navigation-links
             display: none
-    .firm
-        left: .5rem
-        bottom: .5rem
-    .social
-        right: .5rem
-        bottom: 2rem
+            &.mobile-show
+                display: flex
+                position: fixed
+                top: 0
+                background: rgba(black,.5)
+                backdrop-filter: blur(10px) saturate(150%)
+                border-bottom: 1px solid rgba(white,.5)
+                flex-direction: column
+                width: 100vw
+                left: 0
+                padding: 8rem 0 3rem 0
+                align-items: start
+                gap: 0
+                z-index: -1
+                >*
+                    width: 100%
+                    padding: .5rem 1rem
+                    animation-name: glitch-font
+                    animation-duration: .75s
+                    animation-iteration-count: 1
+                    border-top: 1px solid rgba(white, .5)
+                .social
+                    position: absolute
+                    display: flex!important
+                    right: 0
+                    bottom: 0
+                    justify-content: flex-end
+                    border: none
 //'sm': '640px', small phones
 @media (max-width: 640px)
 

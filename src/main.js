@@ -13,10 +13,10 @@ import {
     GiLightningTear,
     GiDevilMask,
     MdMenuSharp,
-    CoReload,
     MdNavigatenextRound,
     MdNavigatebeforeRound,
     IoReloadOutline,
+    IoCloseSharp,
 } from "oh-vue-icons/icons";
 
 addIcons(
@@ -29,10 +29,10 @@ addIcons(
     GiLightningTear,
     GiDevilMask,
     MdMenuSharp,
-    CoReload,
     MdNavigatenextRound,
     MdNavigatebeforeRound,
-    IoReloadOutline
+    IoReloadOutline,
+    IoCloseSharp
 );
 CoTelegramPlane;
 createApp(App).component("v-icon", OhVueIcon).mount("#app");
