@@ -134,14 +134,16 @@ const selectCard = function(i){
     autoIntervalIsOn.value = false;
     cardIndex.value = i;
 }
-
-const cardChangeCycle = () => {
-    if (!autoIntervalIsOn.value) return;
-
-    let next = cardIndex.value + 1;
+const cardChange = (offset)=>{
+    let next = cardIndex.value + offset;
     if (next >= cardList.length)
         next = 0;
     cardIndex.value = next;
+};
+const cardChangeCycle = () => {
+    if (!autoIntervalIsOn.value) return;
+
+    cardChange(1);
 
     setTimeout(cardChangeCycle,5000)
 };
@@ -149,7 +151,17 @@ const cardChangeCycle = () => {
 onMounted(() => {
     setTimeout(cardChangeCycle, 5000);
 });
-
+const prev = ()=>{
+    cardChange(-1);
+};
+const next = ()=>{
+    cardChange(1);
+};
+const auto = ()=>{
+    autoIntervalIsOn.value = !autoIntervalIsOn.value;
+    if(autoIntervalIsOn.value)
+        cardChangeCycle();
+};
 </script>
 
 <template lang="pug">
@@ -190,16 +202,38 @@ section.center.dark-glass.content-section(id="rarity-distribution")
                     .card-image(:style="{backgroundImage: 'url(' + card.image +')'}")
                     span
                         | {{ card.name }}
-        //- .play-menu
-        //-     button.next(@click="next")
-        //-     button.prev(@click="prev")
-        //-     button.auto(@click="auto")
-        //-         .indicator
+        .play-menu.column
+            button.next(@click="next")
+                v-icon(name="md-navigatenext-round" scale="1.5")
+            button.prev(@click="prev")
+                v-icon(name="md-navigatebefore-round" scale="1.5")
+            button.auto(@click="auto" :class="{'active':autoIntervalIsOn}")
+                v-icon(name="io-reload-outline" :fill="autoIntervalIsOn? 'black' : 'white'" scale="1.5")
         
 
 </template>
 
 <style lang="sass">
+.play-menu.column
+    top: calc(100vw + 4rem)
+    position: absolute
+    display: none
+    button
+        padding: .5rem
+button.auto
+    background: transparent
+    border: 1px solid rgba(255,255,255,.5)!important
+    svg
+        *
+            stroke: white!important
+    &.active
+        background: white!important
+        svg
+            *
+                stroke: black!important
+    &:hover
+        background: transparent
+
 .text-content-stretched
     width: calc(35% - 1rem)
     right: 0
@@ -275,12 +309,16 @@ section.center.dark-glass.content-section(id="rarity-distribution")
 
 //'md': '768px', phones
 @media (max-width: 767px)
+    .play-menu.column
+        display: flex
     .content-section
         height: unset
     .text-content-stretched
         width: 100%
         .body-content
             margin-top: 95vw
+        .main-title
+            max-width: calc(100vw - 4rem)
 
 
     .distribution-grid
