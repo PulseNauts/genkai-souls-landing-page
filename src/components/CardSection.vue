@@ -86,7 +86,7 @@ section.center.dark-glass.content-section(id="soul-gambit")
             | to test your mettle and shape the game's future. Dive into our 
             b exclusive chat community 
             | to discuss game development nuances. And that's not all! When 
-            b Soul Gambit
+            b Soul Gambit 
             | launches, you'll receive a 
             b free card set airdrop
             | , so you're battle-ready from day one without spending a dime.
