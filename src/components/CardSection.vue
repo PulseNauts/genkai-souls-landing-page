@@ -66,7 +66,7 @@ onMounted(() => {
 
 <template lang="pug">
 
-section.center.dark-glass.content-section(id="soul-gambit")
+section.center.dark-glass.content-section(id="soul-gambit").card-section
 
     Container.column.expanded.text-content
         VerticalLine.left.grow-bottom.delayed.d-075
@@ -115,6 +115,8 @@ section.center.dark-glass.content-section(id="soul-gambit")
 </template>
 
 <style lang="sass">
+.card-section
+    overflow-x: hidden
 .fade-enter-active
     transition: opacity .5s, transform 1.25s
     z-index: 1000
@@ -207,7 +209,7 @@ span.light
                 width: 100%
                 max-width: unset
             .parallax-card
-                width: 110vw!important
+                width: 100vw!important
                 height: calc((100vw - 2rem) * 1.4)!important
                 max-width: unset
                 top: 5rem

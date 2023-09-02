@@ -36,7 +36,7 @@ section.hero.center
 
 <style lang="sass">
 .hero
-    height: 100vh
+    height: 100svh
     .firm
         display: none
         position: absolute
@@ -52,7 +52,7 @@ section.hero.center
     right: 0
     top: 0
     width: 100vw
-    height: 100dvh
+    height: 100vh
     background: url("../assets/hero-bg.jpg")
     background-position: right center
     background-size: cover

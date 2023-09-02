@@ -17,6 +17,7 @@ import {
     MdNavigatebeforeRound,
     IoReloadOutline,
     IoCloseSharp,
+    CoExternalLink,
 } from "oh-vue-icons/icons";
 
 addIcons(
@@ -32,7 +33,8 @@ addIcons(
     MdNavigatenextRound,
     MdNavigatebeforeRound,
     IoReloadOutline,
-    IoCloseSharp
+    IoCloseSharp,
+    CoExternalLink
 );
 CoTelegramPlane;
 createApp(App).component("v-icon", OhVueIcon).mount("#app");
