@@ -7,11 +7,17 @@ defineProps({
     msg: String,
 })
 
+const emits = defineEmits(['openMintMenu']);
+
+const openMintmenu = function () {
+    console.log("opening menu");
+    emits('openMintMenu');
+};
+
 </script>
 
 <template lang="pug">
 section.hero.center
-    //- .hero-bg.animated-soft.blur-in
     Container
         VerticalLine.left.grow-bottom.delayed.d-075
         VerticalLine.right.grow-top.delayed.d-025
@@ -22,7 +28,7 @@ section.hero.center
                 h1.animated-soft.glitch-font-in.d-100.main-title -SOULS
             div.column.end
                 p.right.animated-soft.blur-in.d-125 Claim the sword of your destiny!<br> Stake your soul for the future they took from us<br> Rebel! Reclaim! Reveal!
-                button.main.animated-soft.hard-glitch-in.delayed.d-250 Minting Soon
+                button.main.animated-soft.hard-glitch-in.delayed.d-250(@click="openMintmenu") Minting Soon
     .firm
         p webpage made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a>
     .social.row.end

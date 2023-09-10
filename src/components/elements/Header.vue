@@ -2,6 +2,12 @@
 import { ref } from 'vue';
 
 const displayMenu = ref(false);
+const emits = defineEmits(['openMintMenu']);
+
+const openMintmenu = function(){
+    console.log("opening menu");
+    emits('openMintMenu');
+};
 </script>
 
 <template lang="pug">
@@ -25,7 +31,7 @@ const displayMenu = ref(false);
             v-icon(name="io-close-sharp" scale="2" fill="white" v-else)
 
 
-        button.main.animated-normal.blink-in.delayed.d-150 Minting Soon
+        button.main.animated-normal.blink-in.delayed.d-150(@click="openMintmenu") Minting Now
 
 </template>
 

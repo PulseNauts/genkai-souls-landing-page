@@ -8,26 +8,38 @@ import RarityDistribution from './components/RarityDistribution.vue';
 import FAQ from './components/FAQ.vue';
 import Footer from './components/Footer.vue';
 import PromoSection from './components/PromoSection.vue';
+import MintView from './components/MintView.vue';
+
+import {ref} from 'vue';
+
+const displayMintView = ref(false);
+
+const openMintDisplay = function(){
+    console.log("opening the menu for gots sake")
+    displayMintView.value = true;
+};
 </script>
 
 <template lang="pug">
 .hero-bg.animated-soft.blur-in
-Hero
-Description
-ShowBand
-CardSection
-RarityDistribution
-PromoSection
-FAQ
-Footer
+Hero(v-if='!displayMintView' @openMintMenu="openMintDisplay")
+Description(v-if='!displayMintView')
+ShowBand(v-if='!displayMintView')
+CardSection(v-if='!displayMintView')
+RarityDistribution(v-if='!displayMintView')
+PromoSection(v-if='!displayMintView')
+FAQ(v-if='!displayMintView')
+Footer(v-if='!displayMintView')
 
-Header
+MintView(v-if='displayMintView')
+
+Header(v-if='!displayMintView' @openMintMenu="openMintDisplay")
 
 .inner-border
 
-.firm
+.firm(v-if='!displayMintView')
     p webpage made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a>
-.social.row.end
+.social.row.end(v-if='!displayMintView')
     a.animated-normal.blink-in.d-200(href="https://twitter.com/PulseSoulsNFT" target="_blank")
         v-icon(name="co-telegram-plane" scale="1.75")
     a.animated-normal.blink-in.d-225(href="https://t.me/Pulse_Souls" target="_blank")
@@ -45,8 +57,6 @@ Header
     font-weight: bold
     font-style: normal
 
-
-    
 .inner-border
     pointer-events: none
     position: fixed
