@@ -101,7 +101,6 @@ async function checkGenkaiBalance() {
     console.log("genkai balance: " + genkaiBalance.value);
 }
 
-
 const minted = ref(0);
 const total = ref(40);
 const claimed = ref(40);
@@ -148,7 +147,7 @@ const checkOwnership = async function (){
     for (let i = 0; i < genkaiBalance.value; i++) {
         let tokenId = await genkaiContract.tokenOfOwnerByIndex(address.value, i);
         console.log("checkingOwnership of token: " + tokenId);
-        const legendaryIndex = legendaryIds.findIndex(tokenId);
+        const legendaryIndex = legendaryIds.indexOf(tokenId);
         const isLegendary = legendaryIndex >= 0;
         
         if(isLegendary){
@@ -163,7 +162,7 @@ onMounted(async ()=>{
 
 const claimBounty = async function(id){
 
-    let contract = new Contract(genkaiAddress, IERC721Enumerable_ABI, signer);
+    let contract = new Contract(genkaiAddress, Genkai_ABI, signer);
     await contract.claimBounty(id);
 }
 </script>
@@ -206,7 +205,7 @@ section.center.dark-glass.content-section.mint-view
                     :key="id"
                     :class="{'marked': token.used, 'selected': token.selected}"
                 )
-                    img.card-image(:src="token.uri.image")
+                    img.card-image(v-if="token.minted" :src="token.uri.image")
                     span.center-text(v-if="!token.minted") Not Yet Minted
                     span.gray {{ 'Legend#' +  token.tokenId + (token.holded? '(Holded)' : '')}}
                     .mark
