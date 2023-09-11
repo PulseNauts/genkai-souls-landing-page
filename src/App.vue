@@ -8,32 +8,47 @@ import RarityDistribution from './components/RarityDistribution.vue';
 import FAQ from './components/FAQ.vue';
 import Footer from './components/Footer.vue';
 import PromoSection from './components/PromoSection.vue';
-import MintView from './components/MintView.vue';
+import MintView from "./components/MintView.vue";
+import ClaimView from './components/ClaimView.vue';
 
 import {ref} from 'vue';
 
 const displayMintView = ref(false);
+const displayClaimView = ref(false);
 
 const openMintDisplay = function(){
-    console.log("opening the menu for gots sake")
     displayMintView.value = true;
+};
+
+const openClaimDisplay = function () {
+    console.log("claim menu bein g opened");
+    displayClaimView.value = true;
 };
 </script>
 
 <template lang="pug">
 .hero-bg.animated-soft.blur-in
-Hero(v-if='!displayMintView' @openMintMenu="openMintDisplay")
-Description(v-if='!displayMintView')
-ShowBand(v-if='!displayMintView')
-CardSection(v-if='!displayMintView')
-RarityDistribution(v-if='!displayMintView')
-PromoSection(v-if='!displayMintView')
-FAQ(v-if='!displayMintView')
-Footer(v-if='!displayMintView')
+Hero(v-if='!displayMintView && !displayClaimView'
+@openMintMenu="openMintDisplay"
+@openClaimMenu="openClaimDisplay"
+)
+Description(v-if='!displayMintView && !displayClaimView')
+ShowBand(v-if='!displayMintView && !displayClaimView')
+CardSection(v-if='!displayMintView && !displayClaimView')
+RarityDistribution(v-if='!displayMintView && !displayClaimView')
+PromoSection(v-if='!displayMintView && !displayClaimView')
+FAQ(v-if='!displayMintView && !displayClaimView')
+Footer(v-if='!displayMintView && !displayClaimView')
 
-MintView(v-if='displayMintView')
+MintView(v-if='displayMintView && !displayClaimView')
 
-Header(v-if='!displayMintView' @openMintMenu="openMintDisplay")
+ClaimView(v-if="displayClaimView")
+
+
+Header(
+    v-if='!displayMintView && !displayClaimView'
+    @openMintMenu="openMintDisplay"
+    )
 
 .inner-border
 

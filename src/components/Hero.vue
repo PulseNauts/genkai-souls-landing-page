@@ -7,11 +7,15 @@ defineProps({
     msg: String,
 })
 
-const emits = defineEmits(['openMintMenu']);
+const emits = defineEmits(['openMintMenu', 'openClaimMenu']);
 
 const openMintmenu = function () {
-    console.log("opening menu");
     emits('openMintMenu');
+};
+
+const openClaimMenu = function () {
+    console.log("opening claim menu");
+    emits('openClaimMenu');
 };
 
 </script>
@@ -29,6 +33,8 @@ section.hero.center
             div.column.end
                 p.right.animated-soft.blur-in.d-125 Claim the sword of your destiny!<br> Stake your soul for the future they took from us<br> Rebel! Reclaim! Reveal!
                 button.main.animated-soft.hard-glitch-in.delayed.d-250(@click="openMintmenu") Minting Now
+                button.animated-soft.hard-glitch-in.delayed.d-275(@click="openClaimMenu") Claim
+
     .firm
         p webpage made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a>
     .social.row.end
