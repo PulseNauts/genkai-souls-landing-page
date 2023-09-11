@@ -79,7 +79,7 @@ const connect = async () => {
         address.value = await signer.getAddress();
         await checkGenkaiBalance();
         if (genkaiBalance.value > 0)
-            checkOwnership();
+            await checkOwnership();
         inspected.value = true;
     }
 };
@@ -101,6 +101,10 @@ async function checkGenkaiBalance() {
     console.log("genkai balance: " + genkaiBalance.value);
 }
 
+
+const minted = ref(0);
+const total = ref(40);
+const claimed = ref(40);
 // CONTRACT FUNCTIONS________________________________________________________________
 async function populateSoulGrid() {
     const legendaryIds = [75, 124, 162, 282, 328, 365, 475, 612, 647, 754, 766, 813, 996, 1048, 1192, 1197, 1239, 1332, 1377, 1554, 1617, 1698, 1816, 1843, 1870, 1880, 1963, 2148, 2291, 2423, 2496, 2562, 2567, 2604, 2615, 2703, 2752, 2768, 2774, 2987];
@@ -140,13 +144,15 @@ const checkOwnership = async function (){
     const legendaryIds = [75, 124, 162, 282, 328, 365, 475, 612, 647, 754, 766, 813, 996, 1048, 1192, 1197, 1239, 1332, 1377, 1554, 1617, 1698, 1816, 1843, 1870, 1880, 1963, 2148, 2291, 2423, 2496, 2562, 2567, 2604, 2615, 2703, 2752, 2768, 2774, 2987];
     // Connect to the RoyaltySplitter contract
     let genkaiContract = new ethers.Contract(genkaiAddress, Genkai_ABI, provider);
-
+    console.log("checking ownership");
     for (let i = 0; i < genkaiBalance.value; i++) {
         let tokenId = await genkaiContract.tokenOfOwnerByIndex(address.value, i);
-        let isLegendary = legendaryIds.findIndex(tokenId) < 0;
+        console.log("checkingOwnership of token: " + tokenId);
+        const legendaryIndex = legendaryIds.findIndex(tokenId);
+        const isLegendary = legendaryIndex >= 0;
+        
         if(isLegendary){
-            const tokenObj = tokensStates.value.find(elem=>elem.tokenId == tokenId);
-            tokenObj.holded = true;
+            tokensStates.value[legendaryIndex].holded = true;
         }
     }
 }
