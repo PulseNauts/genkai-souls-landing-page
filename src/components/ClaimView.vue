@@ -140,7 +140,6 @@ const checkOwnership = async function (){
     const legendaryIds = [75, 124, 162, 282, 328, 365, 475, 612, 647, 754, 766, 813, 996, 1048, 1192, 1197, 1239, 1332, 1377, 1554, 1617, 1698, 1816, 1843, 1870, 1880, 1963, 2148, 2291, 2423, 2496, 2562, 2567, 2604, 2615, 2703, 2752, 2768, 2774, 2987];
     // Connect to the RoyaltySplitter contract
     let genkaiContract = new ethers.Contract(genkaiAddress, Genkai_ABI, provider);
-    tokensStates.value = [];
 
     for (let i = 0; i < genkaiBalance.value; i++) {
         let tokenId = await genkaiContract.tokenOfOwnerByIndex(address.value, i);
@@ -178,7 +177,7 @@ section.center.dark-glass.content-section.mint-view
         .column.condensed.whide
             span.table-title Claim A Bounty
         p
-            | You can mint a 
+            | You can claim a 
             b BOUNTY 
             | for each 
             b Legendary Soul 
