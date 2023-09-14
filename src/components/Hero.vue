@@ -32,8 +32,12 @@ section.hero.center
                 h1.animated-soft.glitch-font-in.d-100.main-title -SOULS
             div.column.end
                 p.right.animated-soft.blur-in.d-125 Claim the sword of your destiny!<br> Stake your soul for the future they took from us<br> Rebel! Reclaim! Reveal!
-                button.main.animated-soft.hard-glitch-in.delayed.d-250(@click="openMintmenu") Minting Now
+                button.animated-soft.hard-glitch-in.delayed.d-250(disabled) Mint Is Over
                 button.animated-soft.hard-glitch-in.delayed.d-275(@click="openClaimMenu") Claim
+
+                p
+                    | All Genkai have been sold already. Yo can check them in secondary market at 
+                    a(href="https://beatbox.market/contract/0x699685f79fc75a673f15778a18bbdd38ec54a0eb") Beatbox.market
 
     .firm
         p webpage made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a>

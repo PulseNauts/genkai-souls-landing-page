@@ -31,7 +31,7 @@ const openMintmenu = function(){
             v-icon(name="io-close-sharp" scale="2" fill="white" v-else)
 
 
-        button.main.animated-normal.blink-in.delayed.d-150(@click="openMintmenu") Minting Now
+        //- button.main.animated-normal.blink-in.delayed.d-150(@click="openMintmenu") Minting Now
 
 </template>
 

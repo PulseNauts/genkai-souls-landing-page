@@ -8,6 +8,11 @@ button
     padding: 1rem 3rem
     text-transform: uppercase
     font-weight: bold
+    &:disabled
+        background: none
+        border: 1px solid rgba(gray, .5)
+        color: gray
+        pointer-events: none
 
     &:hover
         background: white
