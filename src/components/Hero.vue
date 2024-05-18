@@ -27,7 +27,7 @@ section.hero.center
 
         .column.start.title
             div.column.condensed.start
-                h1.animated-soft.hard-glitch-in.d-050.main-title GENKAI
+                h1.animated-soft.hard-glitch-in.d-050.main-title Nephalem 
                 h1.animated-soft.glitch-font-in.d-100.main-title -SOULS
             div.column.end
                 p.right.animated-soft.blur-in.d-125 Claim the sword of your destiny!<br> Stake your soul for the future they took from us<br> Rebel! Reclaim! Reveal!
