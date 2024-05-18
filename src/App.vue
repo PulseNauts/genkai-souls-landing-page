@@ -1,29 +1,15 @@
 <script setup>
-import Header from './components/elements/Header.vue';
-import Hero from './components/Hero.vue';
-import Description from './components/Description.vue';
-import CardSection from './components/CardSection.vue';
-import ShowBand from './components/ShowBand.vue';
-import RarityDistribution from './components/RarityDistribution.vue';
-import FAQ from './components/FAQ.vue';
-import Footer from './components/Footer.vue';
-import PromoSection from './components/PromoSection.vue';
-import MintView from "./components/MintView.vue";
-import ClaimView from './components/ClaimView.vue';
+import Header from "./components/elements/Header.vue";
+import Hero from "./components/Hero.vue";
+import Description from "./components/Description.vue";
+import CardSection from "./components/CardSection.vue";
+import ShowBand from "./components/ShowBand.vue";
+import RarityDistribution from "./components/RarityDistribution.vue";
+import FAQ from "./components/FAQ.vue";
+import Footer from "./components/Footer.vue";
+import PromoSection from "./components/PromoSection.vue";
 
-import {ref} from 'vue';
-
-const displayMintView = ref(false);
-const displayClaimView = ref(false);
-
-const openMintDisplay = function(){
-    displayMintView.value = true;
-};
-
-const openClaimDisplay = function () {
-    console.log("claim menu bein g opened");
-    displayClaimView.value = true;
-};
+import { ref } from "vue";
 </script>
 
 <template lang="pug">

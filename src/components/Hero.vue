@@ -1,23 +1,22 @@
 <script setup>
-import { ref } from 'vue'
-import Container from './elements/Container.vue';
-import VerticalLine from './elements/adornments/VerticalLine.vue';
+import { ref } from "vue";
+import Container from "./elements/Container.vue";
+import VerticalLine from "./elements/adornments/VerticalLine.vue";
 
 defineProps({
-    msg: String,
-})
+  msg: String,
+});
 
-const emits = defineEmits(['openMintMenu', 'openClaimMenu']);
+const emits = defineEmits(["openMintMenu", "openClaimMenu"]);
 
 const openMintmenu = function () {
-    emits('openMintMenu');
+  emits("openMintMenu");
 };
 
 const openClaimMenu = function () {
-    console.log("opening claim menu");
-    emits('openClaimMenu');
+  console.log("opening claim menu");
+  emits("openClaimMenu");
 };
-
 </script>
 
 <template lang="pug">
@@ -32,13 +31,7 @@ section.hero.center
                 h1.animated-soft.glitch-font-in.d-100.main-title -SOULS
             div.column.end
                 p.right.animated-soft.blur-in.d-125 Claim the sword of your destiny!<br> Stake your soul for the future they took from us<br> Rebel! Reclaim! Reveal!
-                button.animated-soft.hard-glitch-in.delayed.d-250(disabled) Mint Is Over
-                button.animated-soft.hard-glitch-in.delayed.d-275(@click="openClaimMenu") Claim
-
-                p
-                    | All Genkai have been sold already. Yo can check them in secondary market at 
-                    a(href="https://beatbox.market/contract/0x699685f79fc75a673f15778a18bbdd38ec54a0eb") Beatbox.market
-
+               
     .firm
         p webpage made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a>
     .social.row.end
@@ -92,7 +85,7 @@ section.hero.center
         left: 2rem
         bottom: 2rem
         right: 2rem
-        
+
 
 @media (max-width: 1920px)
 
@@ -104,7 +97,7 @@ section.hero.center
 
 //'lg': '1024px', ipads
 @media (max-width: 1024px)
-        
+
 //'md': '768px', phones
 @media (max-width: 767px)
     .hero
