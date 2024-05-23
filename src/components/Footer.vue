@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from 'vue'
-import Container from './elements/Container.vue';
-import VerticalLine from './elements/adornments/VerticalLine.vue';
+import { ref } from "vue";
+import Container from "./elements/Container.vue";
+import VerticalLine from "./elements/adornments/VerticalLine.vue";
 </script>
 
 <template lang="pug">
@@ -45,12 +45,12 @@ section.center.dark-glass.footer
 
 //'lg': '1024px', ipads
 @media (max-width: 1024px)
-    
+
 //'md': '768px', phones
 @media (max-width: 767px)
     .footer
         height: 8rem!important
-        
+
         .firm
             display: unset!important
             left: 1rem
@@ -59,7 +59,7 @@ section.center.dark-glass.footer
             display: flex!important
             right: 1rem
             bottom: 3rem
-                
+
 
 //'sm': '640px', small phones
 @media (max-width: 640px)
