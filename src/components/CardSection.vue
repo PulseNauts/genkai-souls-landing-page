@@ -1,66 +1,64 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import Container from './elements/Container.vue';
-import VerticalLine from './elements/adornments/VerticalLine.vue';
-import ParallaxCard from './elements/ParallaxCard.vue';
+import { ref, computed, onMounted } from "vue";
+import Container from "./elements/Container.vue";
+import VerticalLine from "./elements/adornments/VerticalLine.vue";
+import ParallaxCard from "./elements/ParallaxCard.vue";
 
 const cardList = [
-    {
-        name: "Orochi - Venomancer",
-        faction: "gi-alien-fire",
-        atk: 3,
-        def: 2,
-        cost: 2,
-        type: "Genkai - Mage",
-        image: './card-char-0.jpg',
-        body: 'When a friendly unit dies, it transforms into a 3/3 <span class="skill">Venom</span> <span class="green">Green</span> Viper'
-    },
-    {
-        name: "Frimelda - Light Guardian",
-        faction: "gi-lightning-tear",
-        atk: 5,
-        def: 4,
-        cost: 7,
-        type: "Demon Slayer - Swordsman",
-        image: './card-char-2.jpg',
-        body: 'Adjacent units gain +1/0 and become <span class="light">White</span>'
-
-    },
-    {
-        name: "Lilithim - Lightcaster",
-        faction: "gi-devil-mask",
-        atk: 1,
-        def: 1,
-        cost: 5,
-        type: "Akuma - Mage",
-        image: './card-char-1.jpg',
-        body: 'All friendly units have <span class="skill">Lifelink</span>'
-    },
-    {
-        name: "Balnatar - Chaos Sorcerer",
-        faction: "gi-alien-fire",
-        atk: 7,
-        def: 3,
-        cost: 10,
-        type: "Genkai - Mage",
-        image: './card-char-3.jpg',
-        body: '<span class="skill">Spell Damage +4</span>'
-    }
+  {
+    name: "Orochi - Venomancer",
+    faction: "gi-alien-fire",
+    atk: 3,
+    def: 2,
+    cost: 2,
+    type: "Genkai - Mage",
+    image: "./card-char-0.jpg",
+    body: 'When a friendly unit dies, it transforms into a 3/3 <span class="skill">Venom</span> <span class="green">Green</span> Viper',
+  },
+  {
+    name: "Frimelda - Light Guardian",
+    faction: "gi-lightning-tear",
+    atk: 5,
+    def: 4,
+    cost: 7,
+    type: "Demon Slayer - Swordsman",
+    image: "./card-char-2.jpg",
+    body: 'Adjacent units gain +1/0 and become <span class="light">White</span>',
+  },
+  {
+    name: "Lilithim - Lightcaster",
+    faction: "gi-devil-mask",
+    atk: 1,
+    def: 1,
+    cost: 5,
+    type: "Akuma - Mage",
+    image: "./card-char-1.jpg",
+    body: 'All friendly units have <span class="skill">Lifelink</span>',
+  },
+  {
+    name: "Balnatar - Chaos Sorcerer",
+    faction: "gi-alien-fire",
+    atk: 7,
+    def: 3,
+    cost: 10,
+    type: "Genkai - Mage",
+    image: "./card-char-3.jpg",
+    body: '<span class="skill">Spell Damage +4</span>',
+  },
 ];
 const currentCardIndex = ref(0);
 
-const currentCard = computed(()=>{
-    return cardList[currentCardIndex.value];
+const currentCard = computed(() => {
+  return cardList[currentCardIndex.value];
 });
 
 const onAnimation = ref(false);
 onMounted(() => {
-    setInterval(()=>{
-        let next = currentCardIndex.value+1;
-        if(next >= cardList.length)
-        next = 0;
-        currentCardIndex.value = next;
-    },5000)
+  setInterval(() => {
+    let next = currentCardIndex.value + 1;
+    if (next >= cardList.length) next = 0;
+    currentCardIndex.value = next;
+  }, 5000);
 });
 </script>
 
@@ -74,23 +72,21 @@ section.center.dark-glass.content-section(id="soul-gambit").card-section
 
 
         .column.condensed.whide
-            span.table-title Soul Gambit
+            span.table-title Nephalem Souls
         p.body-text
-            | Get ready for an exhilarating journey! We're diverting a portion of our funds to bring to life a brand-new trading card game (TCG) - currently titled 
-            b "Soul Gambit" 
-            | Dive into a world where every card duel is not only thrilling but also rewarding. With dynamic combat mechanics and lucrative rewards, it promises an unmatched gaming experience.
+            | Get ready for an exhilarating journey! We're driven by our vibrant community to bring to life a brand-new trading card game (TCG) - currently titled . 
+            b "Nephalem Souls" 
+            |  Dive into a world where every card duel is not only thrilling but also rewarding. With dynamic combat mechanics and lucrative rewards, it promises an unmatched gaming experience.
             b
             b
-            | Exclusive for PulseSouls and Genkai Souls holders: You'll get 
-            b early beta access 
-            | to test your mettle and shape the game's future. Dive into our 
-            b exclusive chat community 
-            | to discuss game development nuances. And that's not all! When 
-            b Soul Gambit 
-            | launches, you'll receive a 
-            b free card set airdrop
-            | , so you're battle-ready from day one without spending a dime.
-
+            |  This project is community-driven, ensuring that every member's voice shapes the game's future. Engage with our community to discuss game development nuances and contribute to making Nephalem Souls a standout TCG.
+            br
+            br
+            |  Stake your NFTs to earn SOULS tokens daily - Genkai NFTs earn 5 tokens a day, while Souls NFTs earn 10 tokens a day. Your NFTs are not just collectibles; they are your gateway to an evolving gaming experience. 
+            br
+            br
+            b Let's redefine the TCG experience together!
+            
         p.gray
             | Remember, only 
             b token holders 
@@ -215,7 +211,7 @@ span.light
                 top: 5rem
                 left: -1rem
                 // transform: translateX(-50%)
-                
+
 
 //'sm': '640px', small phones
 @media (max-width: 640px)

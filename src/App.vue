@@ -7,7 +7,6 @@ import ShowBand from "./components/ShowBand.vue";
 import RarityDistribution from "./components/RarityDistribution.vue";
 import FAQ from "./components/FAQ.vue";
 import Footer from "./components/Footer.vue";
-import PromoSection from "./components/PromoSection.vue";
 
 import { ref } from "vue";
 </script>
@@ -22,7 +21,6 @@ Description(v-if='!displayMintView && !displayClaimView')
 ShowBand(v-if='!displayMintView && !displayClaimView')
 CardSection(v-if='!displayMintView && !displayClaimView')
 RarityDistribution(v-if='!displayMintView && !displayClaimView')
-PromoSection(v-if='!displayMintView && !displayClaimView')
 FAQ(v-if='!displayMintView && !displayClaimView')
 Footer(v-if='!displayMintView && !displayClaimView')
 

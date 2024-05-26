@@ -1,12 +1,12 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const displayMenu = ref(false);
-const emits = defineEmits(['openMintMenu']);
+const emits = defineEmits(["openMintMenu"]);
 
-const openMintmenu = function(){
-    console.log("opening menu");
-    emits('openMintMenu');
+const openMintmenu = function () {
+  console.log("opening menu");
+  emits("openMintMenu");
 };
 </script>
 
@@ -16,7 +16,7 @@ const openMintmenu = function(){
     .navigation.row.whide.spaced.aligned
         .navigation-links.row.aligned.animated-soft.blur-in.d-3(:class="{'mobile-show': displayMenu}")
             a.d-075(href="#about") Stats
-            a.d-100(href="#soul-gambit") SoulGambit
+            a.d-100(href="#soul-gambit") TCG
             a.d-125(href="#rarity-distribution") Rarity Distribution 
             a.d-150(href="#faq") FAQ
             .social.row.end
@@ -68,7 +68,7 @@ const openMintmenu = function(){
                 animation-name: glitch-font
                 animation-duration: .75s
                 animation-iteration-count: 1
-            
+
 
 @media (max-width: 1920px)
 
@@ -126,5 +126,4 @@ const openMintmenu = function(){
                     border: none
 //'sm': '640px', small phones
 @media (max-width: 640px)
-
 </style>
