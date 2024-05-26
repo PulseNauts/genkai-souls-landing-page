@@ -1,7 +1,6 @@
 <script setup>
 import Header from "./components/elements/Header.vue";
 import Hero from "./components/Hero.vue";
-import Description from "./components/Description.vue";
 import CardSection from "./components/CardSection.vue";
 import ShowBand from "./components/ShowBand.vue";
 import RarityDistribution from "./components/RarityDistribution.vue";
@@ -17,7 +16,6 @@ Hero(v-if='!displayMintView && !displayClaimView'
 @openMintMenu="openMintDisplay"
 @openClaimMenu="openClaimDisplay"
 )
-Description(v-if='!displayMintView && !displayClaimView')
 ShowBand(v-if='!displayMintView && !displayClaimView')
 CardSection(v-if='!displayMintView && !displayClaimView')
 RarityDistribution(v-if='!displayMintView && !displayClaimView')
