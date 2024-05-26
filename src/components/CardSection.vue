@@ -87,13 +87,9 @@ section.center.dark-glass.content-section(id="soul-gambit").card-section
             br
             b Let's redefine the TCG experience together!
             
-        p.gray
-            | Remember, only 
-            b token holders 
-            | get these perks, 
-            b not the minters
-            |. Keep your NFTs close, as they're your key to retaining access to exclusive chats and airdrops. Let's redefine the TCG experience together!
-
+       
+           
+            
         template(v-for="(card, index) in cardList" key="index")
             transition(appear name="fade" mode="in-out")
                 ParallaxCard(
