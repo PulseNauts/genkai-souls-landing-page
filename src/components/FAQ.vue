@@ -42,7 +42,7 @@ section.center.dark-glass.content-section(id="faq")
                         b 5 SOULS 
                         | a day, while Souls NFTs earn 
                         b 10 SOULS 
-                        | a day. This staking mechanism enhances the overall gaming experience and provides ongoing rewards for NFT holders.
+                        | a day. Additionally, these NFTs will be integral to the game, with rarities playing a significant role in gameplay. This staking mechanism enhances the overall gaming experience and provides ongoing rewards for NFT holders.                        
                 .column.end.condensed
                     p.title.row.whide.left.border-bottom $SOUL Staking?
                     p
