@@ -64,7 +64,7 @@ onMounted(() => {
 
 <template lang="pug">
 
-section.center.dark-glass.content-section(id="soul-gambit").card-section
+section.center.dark-glass.content-section(id="TCG").card-section
 
     Container.column.expanded.text-content
         VerticalLine.left.grow-bottom.delayed.d-075

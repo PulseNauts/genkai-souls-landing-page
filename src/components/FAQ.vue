@@ -33,9 +33,9 @@ section.center.dark-glass.content-section(id="faq")
                 .column.end.condensed
                     p.title.row.whide.left.border-bottom Utility?
                     p
-                        b Nephalem Souls 
+                        b Souls 
                         | and 
-                        b GenkaiSouls 
+                        b Genkai 
                         | holders can stake their NFTs to earn 
                         b SOULS tokens 
                         | daily. Genkai NFTs earn 
@@ -55,7 +55,14 @@ section.center.dark-glass.content-section(id="faq")
                         | NFT will earn 
                         b 10 $SOUL 
                         | a day. This earned $SOUL can be used within the Nephalem Souls ecosystem for various in-game activities and rewards.
-
+                        .column.end.condensed
+                    p.title.row.whide.left.border-bottom Royalty claiming
+                    p
+                        | Souls and Genkai NFT holders are entitled to claim royalties generated from the project's success. To claim your royalties, visit the 
+                        a(href="#Royalty") Royalty Center.
+                        br
+                        br
+                        | Stay updated and ensure you regularly claim your earnings as a valued part of our community-driven initiative.
 </template>
 
 <style lang="sass">

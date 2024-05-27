@@ -6,6 +6,7 @@ import ShowBand from "./components/ShowBand.vue";
 import RarityDistribution from "./components/RarityDistribution.vue";
 import FAQ from "./components/FAQ.vue";
 import Footer from "./components/Footer.vue";
+import royalty from "./components/royalty.vue";
 
 import { ref } from "vue";
 </script>
@@ -16,6 +17,7 @@ Hero(v-if='!displayMintView && !displayClaimView'
 @openMintMenu="openMintDisplay"
 @openClaimMenu="openClaimDisplay"
 )
+royalty(v-if='!displayMintView && !displayClaimView')
 ShowBand(v-if='!displayMintView && !displayClaimView')
 CardSection(v-if='!displayMintView && !displayClaimView')
 RarityDistribution(v-if='!displayMintView && !displayClaimView')

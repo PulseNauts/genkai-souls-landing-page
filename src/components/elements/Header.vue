@@ -16,9 +16,10 @@ const openMintmenu = function () {
     .navigation.row.whide.spaced.aligned
         .navigation-links.row.aligned.animated-soft.blur-in.d-3(:class="{'mobile-show': displayMenu}")
             a.d-075(href="#about") Stats
-            a.d-100(href="#soul-gambit") TCG
+            a.d-100(href="#TCG") TCG
             a.d-125(href="#rarity-distribution") Rarity Distribution 
             a.d-150(href="#faq") FAQ
+            a.d-150(href="#Royalty") Royalty
             .social.row.end
                 a.animated-normal.blink-in.d-200(href="https://twitter.com/PulseSoulsNFT" target="_blank")
                     v-icon(name="co-telegram-plane" scale="1.75")
