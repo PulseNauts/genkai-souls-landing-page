@@ -33,32 +33,32 @@ section.center.dark-glass.content-section(id="faq")
                 .column.end.condensed
                     p.title.row.whide.left.border-bottom Utility?
                     p
-                        b Souls 
+                        b Pulse Souls 
                         | and 
-                        b Genkai 
+                        b Genkai Souls
                         | holders can stake their NFTs to earn 
                         b SOULS tokens 
-                        | daily. Genkai NFTs earn 
+                        | daily. Genkai Souls NFTs earn 
                         b 5 SOULS 
-                        | a day, while Souls NFTs earn 
+                        | a day, while Pulse Souls NFTs earn 
                         b 10 SOULS 
                         | a day. Additionally, these NFTs will be integral to the game, with rarities playing a significant role in gameplay. This staking mechanism enhances the overall gaming experience and provides ongoing rewards for NFT holders.                        
                 .column.end.condensed
                     p.title.row.whide.left.border-bottom $SOUL Staking?
                     p
                         | Every 
-                        b GenkaiSoul 
+                        b Genkai Soul 
                         | will earn 
                         b 5 $SOUL 
                         | a day, and every 
-                        b Souls 
+                        b Pulse Soul
                         | NFT will earn 
                         b 10 $SOUL 
                         | a day. This earned $SOUL can be used within the Nephalem Souls ecosystem for various in-game activities and rewards.
                         .column.end.condensed
                     p.title.row.whide.left.border-bottom Royalty claiming
                     p
-                        | Souls and Genkai NFT holders are entitled to claim royalties generated from the project's success. To claim your royalties, visit the 
+                        | Pulse Souls and Genkai Souls holders are entitled to claim royalties generated from the project's success. To claim your royalties, visit the 
                         a(href="#Royalty") Royalty Center.
                         br
                         br

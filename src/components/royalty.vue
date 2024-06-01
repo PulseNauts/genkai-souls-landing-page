@@ -21,7 +21,7 @@ section.hero.center.top-border.dk(id="Royalty")
                 span.hide-md -
                 div.column.end
                 p.right.md-left
-                    |Here, NFT holders can claim their earned royalties. As part of our community-driven initiative, Nephalem Souls and Genkai Souls NFT holders are entitled to royalties generated from the project's success.
+                    |Here, NFT holders can claim their earned royalties. As part of our community-driven initiative, Pulse Souls and Genkai Souls holders are entitled to royalties generated from the project's success.
                     
                     
                 br
