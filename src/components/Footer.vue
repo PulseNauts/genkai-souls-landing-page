@@ -9,9 +9,9 @@ section.center.dark-glass.footer
     .firm
         p webpage made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a>
     .social.row.end
-        a.animated-normal(href="https://twitter.com/PulseSoulsNFT" target="_blank")
+        a.animated-normal(href="https://x.com/GenkaiSouls" target="_blank")
             v-icon(name="co-telegram-plane" scale="1.75")
-        a.animated-normal(href="https://t.me/Pulse_Souls" target="_blank")
+        a.animated-normal(href="https://t.me/PulseSoulsCommunity" target="_blank")
             v-icon(name="co-twitter" scale="1.75")
         
 

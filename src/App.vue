@@ -39,9 +39,9 @@ Header(
 .firm(v-if='!displayMintView')
     p made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a> and <a href="https://twitter.com/dbstrinity" target="_blank">DBSproductions</a>
 .social.row.end(v-if='!displayMintView')
-    a.animated-normal.blink-in.d-200(href="https://t.me/Pulse_Souls " target="_blank")
+    a.animated-normal.blink-in.d-200(href="https://t.me/PulseSoulsCommunity" target="_blank")
         v-icon(name="co-telegram-plane" scale="1.75")
-    a.animated-normal.blink-in.d-225(href="https://twitter.com/PulseSoulsNFT" target="_blank")
+    a.animated-normal.blink-in.d-225(href="https://x.com/GenkaiSouls" target="_blank")
         v-icon(name="co-twitter" scale="1.75")
 </template>
 

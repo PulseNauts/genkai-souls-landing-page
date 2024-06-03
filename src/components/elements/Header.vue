@@ -21,9 +21,9 @@ const openMintmenu = function () {
             a.d-150(href="#faq") FAQ
             a.d-150(href="#Royalty") Royalty
             .social.row.end
-                a.animated-normal.blink-in.d-200(href="https://twitter.com/PulseSoulsNFT" target="_blank")
+                a.animated-normal.blink-in.d-200(href="https://x.com/GenkaiSouls" target="_blank")
                     v-icon(name="co-telegram-plane" scale="1.75")
-                a.animated-normal.blink-in.d-225(href="https://t.me/Pulse_Souls" target="_blank")
+                a.animated-normal.blink-in.d-225(href="https://t.me/PulseSoulsCommunity" target="_blank")
                     v-icon(name="co-twitter" scale="1.75")
 
 
