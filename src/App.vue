@@ -37,7 +37,7 @@ Header(
 .inner-border
 
 .firm(v-if='!displayMintView')
-    p made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a> and <a href="https://twitter.com/dbstrinity" target="_blank">DBSproductions</a>
+    p Made by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a> / <a href="https://twitter.com/dbstrinity" target="_blank">DBSproductions</a> / <a href="https://pulsecreatures.xyz" target="_blank">Pulse Creatures</a>
 .social.row.end(v-if='!displayMintView')
     a.animated-normal.blink-in.d-200(href="https://t.me/PulseSoulsCommunity" target="_blank")
         v-icon(name="co-telegram-plane" scale="1.75")
