@@ -20,6 +20,7 @@ const openMintmenu = function () {
             a.d-125(href="#rarity-distribution") Rarity Distribution 
             a.d-150(href="#faq") FAQ
             a.d-150(href="#Royalty") Royalty
+            a.d-150(href="https://helpful-valkyrie-5478d1.netlify.app/") Staking
             .social.row.end
                 a.animated-normal.blink-in.d-200(href="https://x.com/GenkaiSouls" target="_blank")
                     v-icon(name="co-telegram-plane" scale="1.75")
