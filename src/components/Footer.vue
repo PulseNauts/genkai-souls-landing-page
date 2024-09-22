@@ -7,7 +7,7 @@ import VerticalLine from "./elements/adornments/VerticalLine.vue";
 <template lang="pug">
 section.center.dark-glass.footer
     .firm
-        p webpage made with ♥️ by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a>
+        p Made by <a href="https://twitter.com/HeartLabswin" target="_blank">HeartLabs</a> / <a href="https://twitter.com/dbstrinity" target="_blank">DBSproductions</a> / <a href="https://pulsecreatures.xyz" target="_blank">Pulse Creatures</a>
     .social.row.end
         a.animated-normal(href="https://x.com/GenkaiSouls" target="_blank")
             v-icon(name="co-telegram-plane" scale="1.75")
